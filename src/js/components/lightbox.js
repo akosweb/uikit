@@ -28,7 +28,7 @@ export default {
             name: 'click',
 
             delegate() {
-                return `${this.toggle}:not(.uk-disabled)`;
+                return `${this.toggle}:not(.ui-disabled)`;
             },
 
             handler(e) {
