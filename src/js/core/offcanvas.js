@@ -17,20 +17,20 @@ export default {
     },
 
     data: {
-        content: '.uk-offcanvas-content',
+        content: '.ui-offcanvas-content',
         mode: 'slide',
         flip: false,
         overlay: false,
-        clsPage: 'uk-offcanvas-page',
-        clsContainer: 'uk-offcanvas-container',
-        selPanel: '.uk-offcanvas-bar',
-        clsFlip: 'uk-offcanvas-flip',
-        clsContent: 'uk-offcanvas-content',
-        clsContentAnimation: 'uk-offcanvas-content-animation',
-        clsSidebarAnimation: 'uk-offcanvas-bar-animation',
-        clsMode: 'uk-offcanvas',
-        clsOverlay: 'uk-offcanvas-overlay',
-        selClose: '.uk-offcanvas-close'
+        clsPage: 'ui-offcanvas-page',
+        clsContainer: 'ui-offcanvas-container',
+        selPanel: '.ui-offcanvas-bar',
+        clsFlip: 'ui-offcanvas-flip',
+        clsContent: 'ui-offcanvas-content',
+        clsContentAnimation: 'ui-offcanvas-content-animation',
+        clsSidebarAnimation: 'ui-offcanvas-bar-animation',
+        clsMode: 'ui-offcanvas',
+        clsOverlay: 'ui-offcanvas-overlay',
+        selClose: '.ui-offcanvas-close'
     },
 
     computed: {

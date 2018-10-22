@@ -19,7 +19,7 @@ export default function (UIkit) {
         on(document, 'loadedmetadata load', ({target}) => UIkit.update(target, 'load'), true);
 
         on(document, 'animationstart', ({target}) => {
-            if ((css(target, 'animationName') || '').match(/^uk-.*(left|right)/)) {
+            if ((css(target, 'animationName') || '').match(/^ui-.*(left|right)/)) {
 
                 started++;
                 css(document.body, 'overflowX', 'hidden');
@@ -35,7 +35,7 @@ export default function (UIkit) {
             return;
         }
 
-        const cls = 'uk-hover';
+        const cls = 'ui-hover';
 
         on(document, 'tap', ({target}) =>
             $$(`.${cls}`).forEach(el =>
@@ -51,7 +51,7 @@ export default function (UIkit) {
 
         });
 
-        UIkit.hoverSelector = '.uk-animation-toggle, .uk-transition-toggle, [uk-hover]';
+        UIkit.hoverSelector = '.ui-animation-toggle, .ui-transition-toggle, [ui-hover]';
 
     });
 

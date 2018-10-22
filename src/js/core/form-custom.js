@@ -69,7 +69,7 @@ export default {
                 if (current === this.input) {
                     toggleClass(
                         this.state,
-                        `uk-${includes(type, 'focus') ? 'focus' : 'hover'}`,
+                        `ui-${includes(type, 'focus') ? 'focus' : 'hover'}`,
                         includes(['focusin', 'mouseenter'], type)
                     );
                 }

@@ -1,22 +1,22 @@
 // Name:            Off-canvas
 // Description:     Component to create an off-canvas sidebar
 //
-// Component:       `uk-offcanvas`
+// Component:       `ui-offcanvas`
 //
-// Sub-objects:     `uk-offcanvas-bar`
-//                  `uk-offcanvas-container`
-//                  `uk-offcanvas-content`
-//                  `uk-offcanvas-page`
+// Sub-objects:     `ui-offcanvas-bar`
+//                  `ui-offcanvas-container`
+//                  `ui-offcanvas-content`
+//                  `ui-offcanvas-page`
 //
-// Adopted:         `uk-offcanvas-close`
+// Adopted:         `ui-offcanvas-close`
 //
-// Modifiers:       `uk-offcanvas-flip`
-//                  `uk-offcanvas-bar-animation`
-//                  `uk-offcanvas-reveal`
-//                  `uk-offcanvas-overlay`
-//                  `uk-offcanvas-content-animation`
+// Modifiers:       `ui-offcanvas-flip`
+//                  `ui-offcanvas-bar-animation`
+//                  `ui-offcanvas-reveal`
+//                  `ui-offcanvas-overlay`
+//                  `ui-offcanvas-content-animation`
 //
-// States:          `uk-open`
+// States:          `ui-open`
 //
 // ========================================================================
 
@@ -51,7 +51,7 @@ $offcanvas-overlay-background:                   rgba(0,0,0,0.1) !default;
  * 2. Set position
  */
 
-.uk-offcanvas {
+.ui-offcanvas {
     /* 1 */
     display: none;
     /* 2 */
@@ -66,7 +66,7 @@ $offcanvas-overlay-background:                   rgba(0,0,0,0.1) !default;
  * Flip modifier
  */
 
-.uk-offcanvas-flip .uk-offcanvas {
+.ui-offcanvas-flip .ui-offcanvas {
     right: 0;
     left: auto;
 }
@@ -82,7 +82,7 @@ $offcanvas-overlay-background:                   rgba(0,0,0,0.1) !default;
  * 4. Transform
  */
 
-.uk-offcanvas-bar {
+.ui-offcanvas-bar {
     /* 1 */
     position: absolute;
     top: 0;
@@ -104,7 +104,7 @@ $offcanvas-overlay-background:                   rgba(0,0,0,0.1) !default;
 /* Tablet landscape and bigger */
 @media (min-width: $breakpoint-medium) {
 
-    .uk-offcanvas-bar {
+    .ui-offcanvas-bar {
         width: $offcanvas-bar-width-m;
         padding: $offcanvas-bar-padding-vertical-m $offcanvas-bar-padding-horizontal-m;
     }
@@ -112,11 +112,11 @@ $offcanvas-overlay-background:                   rgba(0,0,0,0.1) !default;
 }
 
 // Color Mode
-@if ( $offcanvas-bar-color-mode == light ) { .uk-offcanvas-bar { @extend .uk-light !optional;} }
-@if ( $offcanvas-bar-color-mode == dark ) { .uk-offcanvas-bar { @extend .uk-dark !optional;} }
+@if ( $offcanvas-bar-color-mode == light ) { .ui-offcanvas-bar { @extend .ui-light !optional;} }
+@if ( $offcanvas-bar-color-mode == dark ) { .ui-offcanvas-bar { @extend .ui-dark !optional;} }
 
 /* Flip modifier */
-.uk-offcanvas-flip .uk-offcanvas-bar {
+.ui-offcanvas-flip .ui-offcanvas-bar {
     left: auto;
     right: 0;
     transform: translateX(100%);
@@ -126,13 +126,13 @@ $offcanvas-overlay-background:                   rgba(0,0,0,0.1) !default;
  * Open
  */
 
-.uk-open > .uk-offcanvas-bar { transform: translateX(0); }
+.ui-open > .ui-offcanvas-bar { transform: translateX(0); }
 
 /*
  * Slide Animation (Used in slide and push mode)
  */
 
-.uk-offcanvas-bar-animation { transition: transform 0.3s ease-out; }
+.ui-offcanvas-bar-animation { transition: transform 0.3s ease-out; }
 
 /*
  * Reveal Animation
@@ -142,7 +142,7 @@ $offcanvas-overlay-background:                   rgba(0,0,0,0.1) !default;
  * 4. Reset transform
  */
 
-.uk-offcanvas-reveal {
+.ui-offcanvas-reveal {
     /* 1 */
     position: absolute;
     top: 0;
@@ -155,17 +155,17 @@ $offcanvas-overlay-background:                   rgba(0,0,0,0.1) !default;
     transition: width 0.3s ease-out;
 }
 
-.uk-offcanvas-reveal .uk-offcanvas-bar {
+.ui-offcanvas-reveal .ui-offcanvas-bar {
     /* 4 */
     transform: translateX(0);
 }
 
-.uk-open > .uk-offcanvas-reveal { width: $offcanvas-bar-width; }
+.ui-open > .ui-offcanvas-reveal { width: $offcanvas-bar-width; }
 
 /* Tablet landscape and bigger */
 @media (min-width: $breakpoint-medium) {
 
-    .uk-open > .uk-offcanvas-reveal { width: $offcanvas-bar-width-m; }
+    .ui-open > .ui-offcanvas-reveal { width: $offcanvas-bar-width-m; }
 
 }
 
@@ -173,17 +173,17 @@ $offcanvas-overlay-background:                   rgba(0,0,0,0.1) !default;
  * Flip modifier
  */
 
-.uk-offcanvas-flip .uk-offcanvas-reveal {
+.ui-offcanvas-flip .ui-offcanvas-reveal {
     right: 0;
     left: auto;
 }
 
 
 /* Close
- * Adopts `uk-close`
+ * Adopts `ui-close`
  ========================================================================== */
 
-.uk-offcanvas-close {
+.ui-offcanvas-close {
     position: absolute;
     z-index: $offcanvas-z-index;
     top: $offcanvas-close-position;
@@ -202,7 +202,7 @@ $offcanvas-overlay-background:                   rgba(0,0,0,0.1) !default;
  * 2. Allow for closing with swipe gesture on devices with pointer events.
  */
 
-.uk-offcanvas-overlay {
+.ui-offcanvas-overlay {
     /* 1 */
     width: 100vw;
     /* 2 */
@@ -214,7 +214,7 @@ $offcanvas-overlay-background:                   rgba(0,0,0,0.1) !default;
  * 2. Fade-in transition
  */
 
-.uk-offcanvas-overlay::before {
+.ui-offcanvas-overlay::before {
     /* 1 */
     content: "";
     position: absolute;
@@ -229,7 +229,7 @@ $offcanvas-overlay-background:                   rgba(0,0,0,0.1) !default;
     @if(mixin-exists(hook-offcanvas-overlay)) {@include hook-offcanvas-overlay();}
 }
 
-.uk-offcanvas-overlay.uk-open::before { opacity: 1; }
+.ui-offcanvas-overlay.ui-open::before { opacity: 1; }
 
 
 /* Container
@@ -240,14 +240,14 @@ $offcanvas-overlay-background:                   rgba(0,0,0,0.1) !default;
  * Has to be on the `html` element too to make it work on the `body`
  */
 
-.uk-offcanvas-page,
-.uk-offcanvas-container { overflow-x: hidden; }
+.ui-offcanvas-page,
+.ui-offcanvas-container { overflow-x: hidden; }
 
 /*
  * Prevent all scrollbars if overlay is used
  */
 
-.uk-offcanvas-container-overlay { overflow: hidden; }
+.ui-offcanvas-container-overlay { overflow: hidden; }
 
 
 /* Content
@@ -261,7 +261,7 @@ $offcanvas-overlay-background:                   rgba(0,0,0,0.1) !default;
  * 1. Smooth scrolling
  */
 
-.uk-offcanvas-container .uk-offcanvas-content {
+.ui-offcanvas-container .ui-offcanvas-content {
     position: relative;
     left: 0;
     transition: left 0.3s ease-out;
@@ -270,22 +270,22 @@ $offcanvas-overlay-background:                   rgba(0,0,0,0.1) !default;
 }
 
 /* Disable scrolling if overlay mode */
-.uk-offcanvas-overlay .uk-offcanvas-content { overflow-y: hidden; }
+.ui-offcanvas-overlay .ui-offcanvas-content { overflow-y: hidden; }
 
 /*
  * Activate slide-out animation
  */
 
-:not(.uk-offcanvas-flip) > .uk-offcanvas-content-animation { left: $offcanvas-bar-width; }
+:not(.ui-offcanvas-flip) > .ui-offcanvas-content-animation { left: $offcanvas-bar-width; }
 
-.uk-offcanvas-flip > .uk-offcanvas-content-animation { left: (-$offcanvas-bar-width); }
+.ui-offcanvas-flip > .ui-offcanvas-content-animation { left: (-$offcanvas-bar-width); }
 
 /* Tablet landscape and bigger */
 @media (min-width: $breakpoint-medium) {
 
-    :not(.uk-offcanvas-flip) > .uk-offcanvas-content-animation { left: $offcanvas-bar-width-m; }
+    :not(.ui-offcanvas-flip) > .ui-offcanvas-content-animation { left: $offcanvas-bar-width-m; }
 
-    .uk-offcanvas-flip > .uk-offcanvas-content-animation { left: (-$offcanvas-bar-width-m); }
+    .ui-offcanvas-flip > .ui-offcanvas-content-animation { left: (-$offcanvas-bar-width-m); }
 
 }
 
