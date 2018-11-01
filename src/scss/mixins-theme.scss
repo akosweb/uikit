@@ -15,7 +15,7 @@
         background-position: 50% 50%;
     }
 
-    .ui-open > &::before { @include svg-fill($internal-accordion-open-image, "#000", $accordion-icon-color); }
+    .uk-open > &::before { @include svg-fill($internal-accordion-open-image, "#000", $accordion-icon-color); }
 
 }
 @mixin hook-accordion-title-hover(){}
@@ -26,9 +26,9 @@
 @mixin hook-inverse-accordion-title-hover(){}
 @mixin hook-inverse-component-accordion(){
 
-    .ui-accordion-title::before { @include svg-fill($internal-accordion-close-image, "#000", $inverse-global-color); }
+    .uk-accordion-title::before { @include svg-fill($internal-accordion-close-image, "#000", $inverse-global-color); }
 
-    .ui-open > .ui-accordion-title::before { @include svg-fill($internal-accordion-open-image, "#000", $inverse-global-color); }
+    .uk-open > .uk-accordion-title::before { @include svg-fill($internal-accordion-open-image, "#000", $inverse-global-color); }
 
 }
 @mixin hook-alert(){}
@@ -50,19 +50,19 @@
      * Content
      */
 
-    .ui-alert h1,
-    .ui-alert h2,
-    .ui-alert h3,
-    .ui-alert h4,
-    .ui-alert h5,
-    .ui-alert h6 { color: inherit; }
+    .uk-alert h1,
+    .uk-alert h2,
+    .uk-alert h3,
+    .uk-alert h4,
+    .uk-alert h5,
+    .uk-alert h6 { color: inherit; }
 
-    .ui-alert a:not([class]) {
+    .uk-alert a:not([class]) {
         color: inherit;
         text-decoration: underline;
     }
 
-    .ui-alert a:not([class]):hover {
+    .uk-alert a:not([class]):hover {
         color: inherit;
         text-decoration: underline;
     }
@@ -88,11 +88,11 @@
 @mixin hook-inverse-article-meta(){}
 @mixin hook-inverse-component-article(){
 
-    .ui-article-title  {
+    .uk-article-title  {
         @if(mixin-exists(hook-inverse-article-title)) {@include hook-inverse-article-title();}
     }
 
-    .ui-article-meta  {
+    .uk-article-meta  {
         color: $inverse-article-meta-color;
         @if(mixin-exists(hook-inverse-article-meta)) {@include hook-inverse-article-meta();}
     }
@@ -106,14 +106,14 @@
 @mixin hook-inverse-badge-hover(){}
 @mixin hook-inverse-component-badge(){
 
-    .ui-badge {
+    .uk-badge {
         background-color: $inverse-badge-background;
         color: $inverse-badge-color;
         @if(mixin-exists(hook-inverse-badge)) {@include hook-inverse-badge();}
     }
 
-    .ui-badge:hover,
-    .ui-badge:focus {
+    .uk-badge:hover,
+    .uk-badge:focus {
         color: $inverse-badge-hover-color;
         @if(mixin-exists(hook-inverse-badge-hover)) {@include hook-inverse-badge-hover();}
     }
@@ -178,13 +178,13 @@
     //
 
     a,
-    .ui-link  {
+    .uk-link  {
         color: $inverse-base-link-color;
         @if(mixin-exists(hook-inverse-base-link)) {@include hook-inverse-base-link();}
     }
 
     a:hover,
-    .ui-link:hover {
+    .uk-link:hover {
         color: $inverse-base-link-hover-color;
         @if(mixin-exists(hook-inverse-base-link-hover)) {@include hook-inverse-base-link-hover();}
     }
@@ -210,37 +210,37 @@
     // Headings
     //
 
-    h1, .ui-h1,
-    h2, .ui-h2,
-    h3, .ui-h3,
-    h4, .ui-h4,
-    h5, .ui-h5,
-    h6, .ui-h6 {
+    h1, .uk-h1,
+    h2, .uk-h2,
+    h3, .uk-h3,
+    h4, .uk-h4,
+    h5, .uk-h5,
+    h6, .uk-h6 {
         color: $inverse-base-heading-color;
         @if(mixin-exists(hook-inverse-base-heading)) {@include hook-inverse-base-heading();}
     }
 
-    h1, .ui-h1 {
+    h1, .uk-h1 {
         @if(mixin-exists(hook-inverse-base-h1)) {@include hook-inverse-base-h1();}
     }
 
-    h2, .ui-h2 {
+    h2, .uk-h2 {
         @if(mixin-exists(hook-inverse-base-h2)) {@include hook-inverse-base-h2();}
     }
 
-    h3, .ui-h3 {
+    h3, .uk-h3 {
         @if(mixin-exists(hook-inverse-base-h3)) {@include hook-inverse-base-h3();}
     }
 
-    h4, .ui-h4 {
+    h4, .uk-h4 {
         @if(mixin-exists(hook-inverse-base-h4)) {@include hook-inverse-base-h4();}
     }
 
-    h5, .ui-h5 {
+    h5, .uk-h5 {
         @if(mixin-exists(hook-inverse-base-h5)) {@include hook-inverse-base-h5();}
     }
 
-    h6, .ui-h6 {
+    h6, .uk-h6 {
         @if(mixin-exists(hook-inverse-base-h6)) {@include hook-inverse-base-h6();}
     }
 
@@ -260,7 +260,7 @@
     // Horizontal rules
     //
 
-    hr, .ui-hr {
+    hr, .uk-hr {
         border-top-color: $inverse-base-hr-border;
         @if(mixin-exists(hook-inverse-base-hr)) {@include hook-inverse-base-hr();}
     }
@@ -280,23 +280,23 @@
 @mixin hook-inverse-breadcrumb-divider(){}
 @mixin hook-inverse-component-breadcrumb(){
 
-    .ui-breadcrumb > * > * {
+    .uk-breadcrumb > * > * {
         color: $inverse-breadcrumb-item-color;
         @if(mixin-exists(hook-inverse-breadcrumb-item)) {@include hook-inverse-breadcrumb-item();}
     }
 
-    .ui-breadcrumb > * > :hover,
-    .ui-breadcrumb > * > :focus {
+    .uk-breadcrumb > * > :hover,
+    .uk-breadcrumb > * > :focus {
         color: $inverse-breadcrumb-item-hover-color;
         @if(mixin-exists(hook-inverse-breadcrumb-item-hover)) {@include hook-inverse-breadcrumb-item-hover();}
     }
 
 
-    .ui-breadcrumb > .ui-disabled > * {
+    .uk-breadcrumb > .uk-disabled > * {
         @if(mixin-exists(hook-inverse-breadcrumb-item-disabled)) {@include hook-inverse-breadcrumb-item-disabled();}
     }
 
-    .ui-breadcrumb > :last-child > * {
+    .uk-breadcrumb > :last-child > * {
         color: $inverse-breadcrumb-item-active-color;
         @if(mixin-exists(hook-inverse-breadcrumb-item-active)) {@include hook-inverse-breadcrumb-item-active();}
     }
@@ -305,7 +305,7 @@
     // Divider
     //
 
-    .ui-breadcrumb > :nth-child(n+2):not(.ui-first-column)::before {
+    .uk-breadcrumb > :nth-child(n+2):not(.uk-first-column)::before {
         color: $inverse-breadcrumb-divider-color;
         @if(mixin-exists(hook-inverse-breadcrumb-divider)) {@include hook-inverse-breadcrumb-divider();}
     }
@@ -369,8 +369,8 @@
      * Collapse border
      */
 
-    .ui-button-group > .ui-button:nth-child(n+2),
-    .ui-button-group > div:nth-child(n+2) .ui-button { margin-left: (-$button-border-width); }
+    .uk-button-group > .uk-button:nth-child(n+2),
+    .uk-button-group > div:nth-child(n+2) .uk-button { margin-left: (-$button-border-width); }
 
     /*
      * Create position context to superimpose the successor elements border
@@ -379,10 +379,10 @@
      * Workaround: Just use a `button` or `input` element as button
      */
 
-    .ui-button-group .ui-button:hover,
-    .ui-button-group .ui-button:focus,
-    .ui-button-group .ui-button:active,
-    .ui-button-group .ui-button.ui-active {
+    .uk-button-group .uk-button:hover,
+    .uk-button-group .uk-button:focus,
+    .uk-button-group .uk-button:active,
+    .uk-button-group .uk-button.uk-active {
         position: relative;
         z-index: 1;
     }
@@ -409,21 +409,21 @@
     // Default
     //
 
-    .ui-button-default {
+    .uk-button-default {
         background-color: $inverse-button-default-background;
         color: $inverse-button-default-color;
         @if(mixin-exists(hook-inverse-button-default)) {@include hook-inverse-button-default();}
     }
 
-    .ui-button-default:hover,
-    .ui-button-default:focus {
+    .uk-button-default:hover,
+    .uk-button-default:focus {
         background-color: $inverse-button-default-hover-background;
         color: $inverse-button-default-hover-color;
         @if(mixin-exists(hook-inverse-button-default-hover)) {@include hook-inverse-button-default-hover();}
     }
 
-    .ui-button-default:active,
-    .ui-button-default.ui-active {
+    .uk-button-default:active,
+    .uk-button-default.uk-active {
         background-color: $inverse-button-default-active-background;
         color: $inverse-button-default-active-color;
         @if(mixin-exists(hook-inverse-button-default-active)) {@include hook-inverse-button-default-active();}
@@ -433,21 +433,21 @@
     // Primary
     //
 
-    .ui-button-primary {
+    .uk-button-primary {
         background-color: $inverse-button-primary-background;
         color: $inverse-button-primary-color;
         @if(mixin-exists(hook-inverse-button-primary)) {@include hook-inverse-button-primary();}
     }
 
-    .ui-button-primary:hover,
-    .ui-button-primary:focus {
+    .uk-button-primary:hover,
+    .uk-button-primary:focus {
         background-color: $inverse-button-primary-hover-background;
         color: $inverse-button-primary-hover-color;
         @if(mixin-exists(hook-inverse-button-primary-hover)) {@include hook-inverse-button-primary-hover();}
     }
 
-    .ui-button-primary:active,
-    .ui-button-primary.ui-active {
+    .uk-button-primary:active,
+    .uk-button-primary.uk-active {
         background-color: $inverse-button-primary-active-background;
         color: $inverse-button-primary-active-color;
         @if(mixin-exists(hook-inverse-button-primary-active)) {@include hook-inverse-button-primary-active();}
@@ -457,21 +457,21 @@
     // Secondary
     //
 
-    .ui-button-secondary {
+    .uk-button-secondary {
         background-color: $inverse-button-secondary-background;
         color: $inverse-button-secondary-color;
         @if(mixin-exists(hook-inverse-button-secondary)) {@include hook-inverse-button-secondary();}
     }
 
-    .ui-button-secondary:hover,
-    .ui-button-secondary:focus {
+    .uk-button-secondary:hover,
+    .uk-button-secondary:focus {
         background-color: $inverse-button-secondary-hover-background;
         color: $inverse-button-secondary-hover-color;
         @if(mixin-exists(hook-inverse-button-secondary-hover)) {@include hook-inverse-button-secondary-hover();}
     }
 
-    .ui-button-secondary:active,
-    .ui-button-secondary.ui-active {
+    .uk-button-secondary:active,
+    .uk-button-secondary.uk-active {
         background-color: $inverse-button-secondary-active-background;
         color: $inverse-button-secondary-active-color;
         @if(mixin-exists(hook-inverse-button-secondary-active)) {@include hook-inverse-button-secondary-active();}
@@ -481,18 +481,18 @@
     // Text
     //
 
-    .ui-button-text {
+    .uk-button-text {
         color: $inverse-button-text-color;
         @if(mixin-exists(hook-inverse-button-text)) {@include hook-inverse-button-text();}
     }
 
-    .ui-button-text:hover,
-    .ui-button-text:focus {
+    .uk-button-text:hover,
+    .uk-button-text:focus {
         color: $inverse-button-text-hover-color;
         @if(mixin-exists(hook-inverse-button-text-hover)) {@include hook-inverse-button-text-hover();}
     }
 
-    .ui-button-text:disabled {
+    .uk-button-text:disabled {
         color: $inverse-button-text-disabled-color;
         @if(mixin-exists(hook-inverse-button-text-disabled)) {@include hook-inverse-button-text-disabled();}
     }
@@ -501,13 +501,13 @@
     // Link
     //
 
-    .ui-button-link {
+    .uk-button-link {
         color: $inverse-button-link-color;
         @if(mixin-exists(hook-inverse-button-link)) {@include hook-inverse-button-link();}
     }
 
-    .ui-button-link:hover,
-    .ui-button-link:focus { color: $inverse-button-link-hover-color; }
+    .uk-button-link:hover,
+    .uk-button-link:focus { color: $inverse-button-link-hover-color; }
 
 
 }
@@ -540,45 +540,45 @@
      * Default
      */
 
-    .ui-card-body > .ui-nav-default {
+    .uk-card-body > .uk-nav-default {
         margin-left: (-$card-body-padding-horizontal);
         margin-right: (-$card-body-padding-horizontal);
     }
-    .ui-card-body > .ui-nav-default:only-child {
+    .uk-card-body > .uk-nav-default:only-child {
         margin-top: (-$card-body-padding-vertical + 15px);
         margin-bottom: (-$card-body-padding-vertical + 15px);
     }
 
-    .ui-card-body .ui-nav-default > li > a,
-    .ui-card-body .ui-nav-default .ui-nav-header,
-    .ui-card-body .ui-nav-default .ui-nav-divider {
+    .uk-card-body .uk-nav-default > li > a,
+    .uk-card-body .uk-nav-default .uk-nav-header,
+    .uk-card-body .uk-nav-default .uk-nav-divider {
         padding-left: $card-body-padding-horizontal;
         padding-right: $card-body-padding-horizontal;
     }
 
-    .ui-card-body .ui-nav-default .ui-nav-sub { padding-left: $nav-sublist-deeper-padding-left + $card-body-padding-horizontal; }
+    .uk-card-body .uk-nav-default .uk-nav-sub { padding-left: $nav-sublist-deeper-padding-left + $card-body-padding-horizontal; }
 
 
     /* Desktop and bigger */
     @media (min-width: $breakpoint-large) {
 
-        .ui-card-body > .ui-nav-default {
+        .uk-card-body > .uk-nav-default {
             margin-left: (-$card-body-padding-horizontal-l);
             margin-right: (-$card-body-padding-horizontal-l);
         }
-        .ui-card-body > .ui-nav-default:only-child {
+        .uk-card-body > .uk-nav-default:only-child {
             margin-top: (-$card-body-padding-vertical-l + 15px);
             margin-bottom: (-$card-body-padding-vertical-l + 15px);
         }
 
-        .ui-card-body .ui-nav-default > li > a,
-        .ui-card-body .ui-nav-default .ui-nav-header,
-        .ui-card-body .ui-nav-default .ui-nav-divider {
+        .uk-card-body .uk-nav-default > li > a,
+        .uk-card-body .uk-nav-default .uk-nav-header,
+        .uk-card-body .uk-nav-default .uk-nav-divider {
             padding-left: $card-body-padding-horizontal-l;
             padding-right: $card-body-padding-horizontal-l;
         }
 
-        .ui-card-body .ui-nav-default .ui-nav-sub { padding-left: $nav-sublist-deeper-padding-left + $card-body-padding-horizontal-l; }
+        .uk-card-body .uk-nav-default .uk-nav-sub { padding-left: $nav-sublist-deeper-padding-left + $card-body-padding-horizontal-l; }
 
     }
 
@@ -586,23 +586,23 @@
      * Small
      */
 
-    .ui-card-small > .ui-nav-default {
+    .uk-card-small > .uk-nav-default {
         margin-left: (-$card-small-body-padding-horizontal);
         margin-right: (-$card-small-body-padding-horizontal);
     }
-    .ui-card-small > .ui-nav-default:only-child {
+    .uk-card-small > .uk-nav-default:only-child {
         margin-top: (-$card-small-body-padding-vertical + 15px);
         margin-bottom: (-$card-small-body-padding-vertical + 15px);
     }
 
-    .ui-card-small .ui-nav-default > li > a,
-    .ui-card-small .ui-nav-default .ui-nav-header,
-    .ui-card-small .ui-nav-default .ui-nav-divider {
+    .uk-card-small .uk-nav-default > li > a,
+    .uk-card-small .uk-nav-default .uk-nav-header,
+    .uk-card-small .uk-nav-default .uk-nav-divider {
         padding-left: $card-small-body-padding-horizontal;
         padding-right: $card-small-body-padding-horizontal;
     }
 
-    .ui-card-small .ui-nav-default .ui-nav-sub { padding-left: $nav-sublist-deeper-padding-left + $card-small-body-padding-horizontal; }
+    .uk-card-small .uk-nav-default .uk-nav-sub { padding-left: $nav-sublist-deeper-padding-left + $card-small-body-padding-horizontal; }
 
     /*
      * Large
@@ -611,17 +611,17 @@
     /* Desktop and bigger */
     @media (min-width: $breakpoint-large) {
 
-        .ui-card-large > .ui-nav-default { margin: 0; }
-        .ui-card-large > .ui-nav-default:only-child { margin: 0; }
+        .uk-card-large > .uk-nav-default { margin: 0; }
+        .uk-card-large > .uk-nav-default:only-child { margin: 0; }
 
-        .ui-card-large .ui-nav-default > li > a,
-        .ui-card-large .ui-nav-default .ui-nav-header,
-        .ui-card-large .ui-nav-default .ui-nav-divider {
+        .uk-card-large .uk-nav-default > li > a,
+        .uk-card-large .uk-nav-default .uk-nav-header,
+        .uk-card-large .uk-nav-default .uk-nav-divider {
             padding-left: 0;
             padding-right: 0;
         }
 
-        .ui-card-large .ui-nav-default .ui-nav-sub { padding-left: $nav-sublist-deeper-padding-left; }
+        .uk-card-large .uk-nav-default .uk-nav-sub { padding-left: $nav-sublist-deeper-padding-left; }
 
     }
 
@@ -636,13 +636,13 @@
 @mixin hook-inverse-close-hover(){}
 @mixin hook-inverse-component-close(){
 
-    .ui-close {
+    .uk-close {
         color: $inverse-close-color;
         @if(mixin-exists(hook-inverse-close)) {@include hook-inverse-close();}
     }
 
-    .ui-close:hover,
-    .ui-close:focus {
+    .uk-close:hover,
+    .uk-close:focus {
         color: $inverse-close-hover-color;
         @if(mixin-exists(hook-inverse-close-hover)) {@include hook-inverse-close-hover();}
     }
@@ -651,7 +651,7 @@
 @mixin hook-column-misc(){}
 @mixin hook-inverse-component-column(){
 
-    .ui-column-divider { column-rule-color: $inverse-column-divider-rule-color; }
+    .uk-column-divider { column-rule-color: $inverse-column-divider-rule-color; }
 
 }
 @mixin hook-comment(){}
@@ -681,20 +681,20 @@
 @mixin hook-inverse-countdown-label(){}
 @mixin hook-inverse-component-countdown(){
 
-    .ui-countdown-number,
-    .ui-countdown-separator {
+    .uk-countdown-number,
+    .uk-countdown-separator {
         @if(mixin-exists(hook-inverse-countdown-item)) {@include hook-inverse-countdown-item();}
     }
 
-    .ui-countdown-number {
+    .uk-countdown-number {
         @if(mixin-exists(hook-inverse-countdown-number)) {@include hook-inverse-countdown-number();}
     }
 
-    .ui-countdown-separator {
+    .uk-countdown-separator {
         @if(mixin-exists(hook-inverse-countdown-separator)) {@include hook-inverse-countdown-separator();}
     }
 
-    .ui-countdown-label {
+    .uk-countdown-label {
         @if(mixin-exists(hook-inverse-countdown-label)) {@include hook-inverse-countdown-label();}
     }
 
@@ -731,23 +731,23 @@
 @mixin hook-inverse-divider-vertical(){}
 @mixin hook-inverse-component-divider(){
 
-    .ui-divider-icon {
+    .uk-divider-icon {
         @include svg-fill($internal-divider-icon-image, "#000", $inverse-divider-icon-color);
         @if(mixin-exists(hook-inverse-divider-icon)) {@include hook-inverse-divider-icon();}
     }
 
-    .ui-divider-icon::before,
-    .ui-divider-icon::after {
+    .uk-divider-icon::before,
+    .uk-divider-icon::after {
         border-bottom-color: $inverse-divider-icon-line-border;
         @if(mixin-exists(hook-inverse-divider-icon-line)) {@include hook-inverse-divider-icon-line();}
     }
 
-    .ui-divider-small::after {
+    .uk-divider-small::after {
         border-top-color: $inverse-divider-small-border;
         @if(mixin-exists(hook-inverse-divider-small)) {@include hook-inverse-divider-small();}
     }
 
-    .ui-divider-vertical::after {
+    .uk-divider-vertical::after {
         border-left-color: $inverse-divider-vertical-border;
         @if(mixin-exists(hook-inverse-divider-vertical)) {@include hook-inverse-divider-vertical();}
     }
@@ -769,23 +769,23 @@
 @mixin hook-inverse-dotnav-item-active(){ border-color: transparent; }
 @mixin hook-inverse-component-dotnav(){
 
-    .ui-dotnav > * > * {
+    .uk-dotnav > * > * {
         background-color: $inverse-dotnav-item-background;
         @if(mixin-exists(hook-inverse-dotnav-item)) {@include hook-inverse-dotnav-item();}
     }
 
-    .ui-dotnav > * > :hover,
-    .ui-dotnav > * > :focus {
+    .uk-dotnav > * > :hover,
+    .uk-dotnav > * > :focus {
         background-color: $inverse-dotnav-item-hover-background;
         @if(mixin-exists(hook-inverse-dotnav-item-hover)) {@include hook-inverse-dotnav-item-hover();}
     }
 
-    .ui-dotnav > * > :active {
+    .uk-dotnav > * > :active {
         background-color: $inverse-dotnav-item-onclick-background;
         @if(mixin-exists(hook-inverse-dotnav-item-onclick)) {@include hook-inverse-dotnav-item-onclick();}
     }
 
-    .ui-dotnav > .ui-active > * {
+    .uk-dotnav > .uk-active > * {
         background-color: $inverse-dotnav-item-active-background;
         @if(mixin-exists(hook-inverse-dotnav-item-active)) {@include hook-inverse-dotnav-item-active();}
     }
@@ -847,9 +847,9 @@
 @mixin hook-inverse-form-label(){ color: $inverse-form-label-color; }
 @mixin hook-inverse-component-form(){
 
-    .ui-input,
-    .ui-select,
-    .ui-textarea {
+    .uk-input,
+    .uk-select,
+    .uk-textarea {
         background-color: $inverse-form-background;
         color: $inverse-form-color;
         background-clip: padding-box;
@@ -866,70 +866,70 @@
     // Placeholder
     //
 
-    .ui-input::-ms-input-placeholder { color: $inverse-form-placeholder-color !important; }
-    .ui-input::placeholder { color: $inverse-form-placeholder-color; }
+    .uk-input::-ms-input-placeholder { color: $inverse-form-placeholder-color !important; }
+    .uk-input::placeholder { color: $inverse-form-placeholder-color; }
 
-    .ui-textarea::-ms-input-placeholder { color: $inverse-form-placeholder-color !important; }
-    .ui-textarea::placeholder { color: $inverse-form-placeholder-color; }
-
-    //
-    // Radio and checkbox
-    //
-
-    .ui-select:not([multiple]):not([size]) { @include svg-fill($internal-form-select-image, "#000", $inverse-form-select-icon-color); }
+    .uk-textarea::-ms-input-placeholder { color: $inverse-form-placeholder-color !important; }
+    .uk-textarea::placeholder { color: $inverse-form-placeholder-color; }
 
     //
     // Radio and checkbox
     //
 
-    .ui-radio,
-    .ui-checkbox {
+    .uk-select:not([multiple]):not([size]) { @include svg-fill($internal-form-select-image, "#000", $inverse-form-select-icon-color); }
+
+    //
+    // Radio and checkbox
+    //
+
+    .uk-radio,
+    .uk-checkbox {
         background-color: $inverse-form-radio-background;
         @if(mixin-exists(hook-inverse-form-radio)) {@include hook-inverse-form-radio();}
     }
 
     // Focus
-    .ui-radio:focus,
-    .ui-checkbox:focus {
+    .uk-radio:focus,
+    .uk-checkbox:focus {
         @if(mixin-exists(hook-inverse-form-radio-focus)) {@include hook-inverse-form-radio-focus();}
     }
 
     // Checked
-    .ui-radio:checked,
-    .ui-checkbox:checked,
-    .ui-checkbox:indeterminate {
+    .uk-radio:checked,
+    .uk-checkbox:checked,
+    .uk-checkbox:indeterminate {
         background-color: $inverse-form-radio-checked-background;
         @if(mixin-exists(hook-inverse-form-radio-checked)) {@include hook-inverse-form-radio-checked();}
     }
 
     // Focus
-    .ui-radio:checked:focus,
-    .ui-checkbox:checked:focus,
-    .ui-checkbox:indeterminate:focus {
+    .uk-radio:checked:focus,
+    .uk-checkbox:checked:focus,
+    .uk-checkbox:indeterminate:focus {
         background-color: $inverse-form-radio-checked-focus-background;
         @if(mixin-exists(hook-inverse-form-radio-checked-focus)) {@include hook-inverse-form-radio-checked-focus();}
     }
 
     // Icon
-    .ui-radio:checked { @include svg-fill($internal-form-radio-image, "#000", $inverse-form-radio-checked-icon-color); }
-    .ui-checkbox:checked { @include svg-fill($internal-form-checkbox-image, "#000", $inverse-form-radio-checked-icon-color); }
-    .ui-checkbox:indeterminate { @include svg-fill($internal-form-checkbox-indeterminate-image, "#000", $inverse-form-radio-checked-icon-color); }
+    .uk-radio:checked { @include svg-fill($internal-form-radio-image, "#000", $inverse-form-radio-checked-icon-color); }
+    .uk-checkbox:checked { @include svg-fill($internal-form-checkbox-image, "#000", $inverse-form-radio-checked-icon-color); }
+    .uk-checkbox:indeterminate { @include svg-fill($internal-form-checkbox-indeterminate-image, "#000", $inverse-form-radio-checked-icon-color); }
 
     // Label
-    .ui-form-label {
+    .uk-form-label {
         @if(mixin-exists(hook-inverse-form-label)) {@include hook-inverse-form-label();}
     }
 
     // Icon
-    .ui-form-icon { color: $inverse-form-icon-color; }
-    .ui-form-icon:hover { color: $inverse-form-icon-hover-color; }
+    .uk-form-icon { color: $inverse-form-icon-color; }
+    .uk-form-icon:hover { color: $inverse-form-icon-hover-color; }
 
 }
 @mixin hook-grid-misc(){}
 @mixin hook-inverse-component-grid(){
 
-    .ui-grid-divider > :not(.ui-first-column)::before { border-left-color: $inverse-grid-divider-border; }
-    .ui-grid-divider.ui-grid-stack > .ui-grid-margin::before { border-top-color: $inverse-grid-divider-border; }
+    .uk-grid-divider > :not(.uk-first-column)::before { border-left-color: $inverse-grid-divider-border; }
+    .uk-grid-divider.uk-grid-stack > .uk-grid-margin::before { border-top-color: $inverse-grid-divider-border; }
 
 }
 @mixin hook-heading-primary(){}
@@ -945,26 +945,26 @@
 @mixin hook-inverse-heading-line(){}
 @mixin hook-inverse-component-heading(){
 
-    .ui-heading-primary {
+    .uk-heading-primary {
         @if(mixin-exists(hook-inverse-heading-primary)) {@include hook-inverse-heading-primary();}
     }
 
-    .ui-heading-hero {
+    .uk-heading-hero {
         @if(mixin-exists(hook-inverse-heading-hero)) {@include hook-inverse-heading-hero();}
     }
 
-    .ui-heading-divider {
+    .uk-heading-divider {
         border-bottom-color: $inverse-heading-divider-border;
         @if(mixin-exists(hook-inverse-heading-divider)) {@include hook-inverse-heading-divider();}
     }
 
-    .ui-heading-bullet::before {
+    .uk-heading-bullet::before {
         border-left-color: $inverse-heading-bullet-border;
         @if(mixin-exists(hook-inverse-heading-bullet)) {@include hook-inverse-heading-bullet();}
     }
 
-    .ui-heading-line > ::before,
-    .ui-heading-line > ::after {
+    .uk-heading-line > ::before,
+    .uk-heading-line > ::after {
         border-bottom-color: $inverse-heading-line-border;
         @if(mixin-exists(hook-inverse-heading-line)) {@include hook-inverse-heading-line();}
     }
@@ -993,19 +993,19 @@
     // Link
     //
 
-    .ui-icon-link {
+    .uk-icon-link {
         color: $inverse-icon-link-color;
         @if(mixin-exists(hook-inverse-icon-link)) {@include hook-inverse-icon-link();}
     }
 
-    .ui-icon-link:hover,
-    .ui-icon-link:focus {
+    .uk-icon-link:hover,
+    .uk-icon-link:focus {
         color: $inverse-icon-link-hover-color;
         @if(mixin-exists(hook-inverse-icon-link-hover)) {@include hook-inverse-icon-link-hover();}
     }
 
-    .ui-icon-link:active,
-    .ui-active > .ui-icon-link {
+    .uk-icon-link:active,
+    .uk-active > .uk-icon-link {
         color: $inverse-icon-link-active-color;
         @if(mixin-exists(hook-inverse-icon-link-active)) {@include hook-inverse-icon-link-active();}
     }
@@ -1014,20 +1014,20 @@
     // Button
     //
 
-    .ui-icon-button {
+    .uk-icon-button {
         background-color: $inverse-icon-button-background;
         color: $inverse-icon-button-color;
         @if(mixin-exists(hook-inverse-icon-button)) {@include hook-inverse-icon-button();}
     }
 
-    .ui-icon-button:hover,
-    .ui-icon-button:focus {
+    .uk-icon-button:hover,
+    .uk-icon-button:focus {
         background-color: $inverse-icon-button-hover-background;
         color: $inverse-icon-button-hover-color;
         @if(mixin-exists(hook-inverse-icon-button-hover)) {@include hook-inverse-icon-button-hover();}
     }
 
-    .ui-icon-button:active {
+    .uk-icon-button:active {
         background-color: $inverse-icon-button-active-background;
         color: $inverse-icon-button-active-color;
         @if(mixin-exists(hook-inverse-icon-button-active)) {@include hook-inverse-icon-button-active();}
@@ -1044,18 +1044,18 @@
 @mixin hook-inverse-iconnav-item-active(){}
 @mixin hook-inverse-component-iconnav(){
 
-    .ui-iconnav > * > a {
+    .uk-iconnav > * > a {
         color: $inverse-iconnav-item-color;
         @if(mixin-exists(hook-inverse-iconnav-item)) {@include hook-inverse-iconnav-item();}
     }
 
-    .ui-iconnav > * > a:hover,
-    .ui-iconnav > * > a:focus {
+    .uk-iconnav > * > a:hover,
+    .uk-iconnav > * > a:focus {
         color: $inverse-iconnav-item-hover-color;
         @if(mixin-exists(hook-inverse-iconnav-item-hover)) {@include hook-inverse-iconnav-item-hover();}
     }
 
-    .ui-iconnav > .ui-active > a {
+    .uk-iconnav > .uk-active > a {
         color: $inverse-iconnav-item-active-color;
         @if(mixin-exists(hook-inverse-iconnav-item-active)) {@include hook-inverse-iconnav-item-active();}
     }
@@ -1063,26 +1063,26 @@
 }
 @mixin hook-inverse-component-link(){
 
-    a.ui-link-muted,
-    .ui-link-muted a {
+    a.uk-link-muted,
+    .uk-link-muted a {
         color: $inverse-link-muted-color;
         @if(mixin-exists(hook-inverse-link-muted)) {@include hook-inverse-link-muted();}
     }
 
-    a.ui-link-muted:hover,
-    .ui-link-muted a:hover {
+    a.uk-link-muted:hover,
+    .uk-link-muted a:hover {
         color: $inverse-link-muted-hover-color;
         @if(mixin-exists(hook-inverse-link-muted-hover)) {@include hook-inverse-link-muted-hover();}
     }
 
-    a.ui-link-text:hover,
-    .ui-link-text a:hover {
+    a.uk-link-text:hover,
+    .uk-link-text a:hover {
         color: $inverse-link-text-hover-color;
         @if(mixin-exists(hook-inverse-link-text-hover)) {@include hook-inverse-link-text-hover();}
     }
 
-    a.ui-link-heading:hover,
-    .ui-link-heading a:hover {
+    a.uk-link-heading:hover,
+    .uk-link-heading a:hover {
         color: $inverse-link-heading-hover-color;
         @if(mixin-exists(hook-inverse-link-heading-hover)) {@include hook-inverse-link-heading-hover();}
     }
@@ -1090,18 +1090,18 @@
 }
 @mixin hook-inverse-component-list(){
 
-    .ui-list-divider > li:nth-child(n+2) {
+    .uk-list-divider > li:nth-child(n+2) {
         border-top-color: $inverse-list-divider-border;
         @if(mixin-exists(hook-inverse-list-divider)) {@include hook-inverse-list-divider();}
     }
 
-    .ui-list-striped > li {
+    .uk-list-striped > li {
         @if(mixin-exists(hook-inverse-list-striped)) {@include hook-inverse-list-striped();}
     }
 
-    .ui-list-striped > li:nth-of-type(odd) { background-color: $inverse-list-striped-background; }
+    .uk-list-striped > li:nth-of-type(odd) { background-color: $inverse-list-striped-background; }
 
-    .ui-list-bullet > li::before {
+    .uk-list-bullet > li::before {
         @include svg-fill($internal-list-bullet-image, "#000", $inverse-list-bullet-icon-color);
         @if(mixin-exists(hook-inverse-list-bullet)) {@include hook-inverse-list-bullet();}
     }
@@ -1109,18 +1109,18 @@
 }
 @mixin hook-inverse-component-totop(){
 
-    .ui-totop {
+    .uk-totop {
         color: $inverse-totop-color;
         @if(mixin-exists(hook-inverse-totop)) {@include hook-inverse-totop();}
     }
 
-    .ui-totop:hover,
-    .ui-totop:focus {
+    .uk-totop:hover,
+    .uk-totop:focus {
         color: $inverse-totop-hover-color;
         @if(mixin-exists(hook-inverse-totop-hover)) {@include hook-inverse-totop-hover();}
     }
 
-    .ui-totop:active {
+    .uk-totop:active {
         color: $inverse-totop-active-color;
         @if(mixin-exists(hook-inverse-totop-active)) {@include hook-inverse-totop-active();}
     }
@@ -1128,7 +1128,7 @@
 }
 @mixin hook-inverse-component-label(){
 
-    .ui-label {
+    .uk-label {
         background-color: $inverse-label-background;
         color: $inverse-label-color;
         @if(mixin-exists(hook-inverse-label)) {@include hook-inverse-label();}
@@ -1141,38 +1141,38 @@
     // Input
     //
 
-    .ui-search-input { color: $inverse-search-color; }
+    .uk-search-input { color: $inverse-search-color; }
 
-    .ui-search-input:-ms-input-placeholder { color: $inverse-search-placeholder-color !important; }
-    .ui-search-input::placeholder { color: $inverse-search-placeholder-color; }
+    .uk-search-input:-ms-input-placeholder { color: $inverse-search-placeholder-color !important; }
+    .uk-search-input::placeholder { color: $inverse-search-placeholder-color; }
 
 
     //
     // Icon
     //
 
-    .ui-search .ui-search-icon { color: $inverse-search-icon-color; }
-    .ui-search .ui-search-icon:hover { color: $inverse-search-icon-color; }
+    .uk-search .uk-search-icon { color: $inverse-search-icon-color; }
+    .uk-search .uk-search-icon:hover { color: $inverse-search-icon-color; }
 
     //
     // Style modifier
     //
 
-    .ui-search-default .ui-search-input {
+    .uk-search-default .uk-search-input {
         background-color: $inverse-search-default-background;
         @if(mixin-exists(hook-inverse-search-default-input)) {@include hook-inverse-search-default-input();}
     }
-    .ui-search-default .ui-search-input:focus {
+    .uk-search-default .uk-search-input:focus {
         background-color: $inverse-search-default-background;
         @if(mixin-exists(hook-inverse-search-default-input-focus)) {@include hook-inverse-search-default-input-focus();}
     }
 
-    .ui-search-navbar .ui-search-input {
+    .uk-search-navbar .uk-search-input {
         background-color: $inverse-search-navbar-background;
         @if(mixin-exists(hook-inverse-search-navbar-input)) {@include hook-inverse-search-navbar-input();}
     }
 
-    .ui-search-large .ui-search-input {
+    .uk-search-large .uk-search-input {
         background-color: $inverse-search-large-background;
         @if(mixin-exists(hook-inverse-search-large-input)) {@include hook-inverse-search-large-input();}
     }
@@ -1181,13 +1181,13 @@
     // Toggle
     //
 
-    .ui-search-toggle {
+    .uk-search-toggle {
         color: $inverse-search-toggle-color;
         @if(mixin-exists(hook-inverse-search-toggle)) {@include hook-inverse-search-toggle();}
     }
 
-    .ui-search-toggle:hover,
-    .ui-search-toggle:focus {
+    .uk-search-toggle:hover,
+    .uk-search-toggle:focus {
         color: $inverse-search-toggle-hover-color;
         @if(mixin-exists(hook-inverse-search-toggle-hover)) {@include hook-inverse-search-toggle-hover();}
     }
@@ -1199,121 +1199,121 @@
     // Parent icon modifier
     //
 
-    .ui-nav-parent-icon > .ui-parent > a::after {
+    .uk-nav-parent-icon > .uk-parent > a::after {
         @include svg-fill($internal-nav-parent-close-image, "#000", $inverse-nav-parent-icon-color);
         @if(mixin-exists(hook-inverse-nav-parent-icon)) {@include hook-inverse-nav-parent-icon();}
     }
 
-    .ui-nav-parent-icon > .ui-parent.ui-open > a::after { @include svg-fill($internal-nav-parent-open-image, "#000", $inverse-nav-parent-icon-color); }
+    .uk-nav-parent-icon > .uk-parent.uk-open > a::after { @include svg-fill($internal-nav-parent-open-image, "#000", $inverse-nav-parent-icon-color); }
 
     //
     // Default
     //
 
-    .ui-nav-default > li > a {
+    .uk-nav-default > li > a {
         color: $inverse-nav-default-item-color;
         @if(mixin-exists(hook-inverse-nav-default-item)) {@include hook-inverse-nav-default-item();}
     }
 
-    .ui-nav-default > li > a:hover,
-    .ui-nav-default > li > a:focus {
+    .uk-nav-default > li > a:hover,
+    .uk-nav-default > li > a:focus {
         color: $inverse-nav-default-item-hover-color;
         @if(mixin-exists(hook-inverse-nav-default-item-hover)) {@include hook-inverse-nav-default-item-hover();}
     }
 
-    .ui-nav-default > li.ui-active > a {
+    .uk-nav-default > li.uk-active > a {
         color: $inverse-nav-default-item-active-color;
         @if(mixin-exists(hook-inverse-nav-default-item-active)) {@include hook-inverse-nav-default-item-active();}
     }
 
-    .ui-nav-default .ui-nav-header {
+    .uk-nav-default .uk-nav-header {
         color: $inverse-nav-default-header-color;
         @if(mixin-exists(hook-inverse-nav-default-header)) {@include hook-inverse-nav-default-header();}
     }
 
-    .ui-nav-default .ui-nav-divider {
+    .uk-nav-default .uk-nav-divider {
         border-top-color: $inverse-nav-default-divider-border;
         @if(mixin-exists(hook-inverse-nav-default-divider)) {@include hook-inverse-nav-default-divider();}
     }
 
-    .ui-nav-default .ui-nav-sub a { color: $inverse-nav-default-sublist-item-color; }
+    .uk-nav-default .uk-nav-sub a { color: $inverse-nav-default-sublist-item-color; }
 
-    .ui-nav-default .ui-nav-sub a:hover,
-    .ui-nav-default .ui-nav-sub a:focus { color: $inverse-nav-default-sublist-item-hover-color; }
+    .uk-nav-default .uk-nav-sub a:hover,
+    .uk-nav-default .uk-nav-sub a:focus { color: $inverse-nav-default-sublist-item-hover-color; }
 
     //
     // Primary
     //
 
-    .ui-nav-primary > li > a {
+    .uk-nav-primary > li > a {
         color: $inverse-nav-primary-item-color;
         @if(mixin-exists(hook-inverse-nav-primary-item)) {@include hook-inverse-nav-primary-item();}
     }
 
-    .ui-nav-primary > li > a:hover,
-    .ui-nav-primary > li > a:focus {
+    .uk-nav-primary > li > a:hover,
+    .uk-nav-primary > li > a:focus {
         color: $inverse-nav-primary-item-hover-color;
         @if(mixin-exists(hook-inverse-nav-primary-item-hover)) {@include hook-inverse-nav-primary-item-hover();}
     }
 
-    .ui-nav-primary > li.ui-active > a {
+    .uk-nav-primary > li.uk-active > a {
         color: $inverse-nav-primary-item-active-color;
         @if(mixin-exists(hook-inverse-nav-primary-item-active)) {@include hook-inverse-nav-primary-item-active();}
     }
 
-    .ui-nav-primary .ui-nav-header {
+    .uk-nav-primary .uk-nav-header {
         color: $inverse-nav-primary-header-color;
         @if(mixin-exists(hook-inverse-nav-primary-header)) {@include hook-inverse-nav-primary-header();}
     }
 
-    .ui-nav-primary .ui-nav-divider {
+    .uk-nav-primary .uk-nav-divider {
         border-top-color: $inverse-nav-primary-divider-border;
         @if(mixin-exists(hook-inverse-nav-primary-divider)) {@include hook-inverse-nav-primary-divider();}
     }
 
-    .ui-nav-primary .ui-nav-sub a { color: $inverse-nav-primary-sublist-item-color; }
+    .uk-nav-primary .uk-nav-sub a { color: $inverse-nav-primary-sublist-item-color; }
 
-    .ui-nav-primary .ui-nav-sub a:hover,
-    .ui-nav-primary .ui-nav-sub a:focus { color: $inverse-nav-primary-sublist-item-hover-color; }
+    .uk-nav-primary .uk-nav-sub a:hover,
+    .uk-nav-primary .uk-nav-sub a:focus { color: $inverse-nav-primary-sublist-item-hover-color; }
 
 }
 @mixin hook-inverse-component-navbar(){
 
-    .ui-navbar-nav > li > a {
+    .uk-navbar-nav > li > a {
         color: $inverse-navbar-nav-item-color;
         @if(mixin-exists(hook-inverse-navbar-nav-item)) {@include hook-inverse-navbar-nav-item();}
     }
 
-    .ui-navbar-nav > li:hover > a,
-    .ui-navbar-nav > li > a:focus,
-    .ui-navbar-nav > li > a.ui-open {
+    .uk-navbar-nav > li:hover > a,
+    .uk-navbar-nav > li > a:focus,
+    .uk-navbar-nav > li > a.uk-open {
         color: $inverse-navbar-nav-item-hover-color;
         @if(mixin-exists(hook-inverse-navbar-nav-item-hover)) {@include hook-inverse-navbar-nav-item-hover();}
     }
 
-    .ui-navbar-nav > li > a:active {
+    .uk-navbar-nav > li > a:active {
         color: $inverse-navbar-nav-item-onclick-color;
         @if(mixin-exists(hook-inverse-navbar-nav-item-onclick)) {@include hook-inverse-navbar-nav-item-onclick();}
     }
 
-    .ui-navbar-nav > li.ui-active > a {
+    .uk-navbar-nav > li.uk-active > a {
         color: $inverse-navbar-nav-item-active-color;
         @if(mixin-exists(hook-inverse-navbar-nav-item-active)) {@include hook-inverse-navbar-nav-item-active();}
     }
 
-    .ui-navbar-item {
+    .uk-navbar-item {
         color: $inverse-navbar-item-color;
         @if(mixin-exists(hook-inverse-navbar-item)) {@include hook-inverse-navbar-item();}
     }
 
-    .ui-navbar-toggle {
+    .uk-navbar-toggle {
         color: $inverse-navbar-toggle-color;
         @if(mixin-exists(hook-inverse-navbar-toggle)) {@include hook-inverse-navbar-toggle();}
     }
 
-    .ui-navbar-toggle:hover,
-    .ui-navbar-toggle:focus,
-    .ui-navbar-toggle.ui-open {
+    .uk-navbar-toggle:hover,
+    .uk-navbar-toggle:focus,
+    .uk-navbar-toggle.uk-open {
         color: $inverse-navbar-toggle-hover-color;
         @if(mixin-exists(hook-inverse-navbar-toggle-hover)) {@include hook-inverse-navbar-toggle-hover();}
     }
@@ -1321,18 +1321,18 @@
 }
 @mixin hook-inverse-component-subnav(){
 
-    .ui-subnav > * > :first-child {
+    .uk-subnav > * > :first-child {
         color: $inverse-subnav-item-color;
         @if(mixin-exists(hook-inverse-subnav-item)) {@include hook-inverse-subnav-item();}
     }
 
-    .ui-subnav > * > a:hover,
-    .ui-subnav > * > a:focus {
+    .uk-subnav > * > a:hover,
+    .uk-subnav > * > a:focus {
         color: $inverse-subnav-item-hover-color;
         @if(mixin-exists(hook-inverse-subnav-item-hover)) {@include hook-inverse-subnav-item-hover();}
     }
 
-    .ui-subnav > .ui-active > a {
+    .uk-subnav > .uk-active > a {
         color: $inverse-subnav-item-active-color;
         @if(mixin-exists(hook-inverse-subnav-item-active)) {@include hook-inverse-subnav-item-active();}
     }
@@ -1341,7 +1341,7 @@
     // Divider
     //
 
-    .ui-subnav-divider > :nth-child(n+2):not(.ui-first-column)::before {
+    .uk-subnav-divider > :nth-child(n+2):not(.uk-first-column)::before {
         border-left-color: $inverse-subnav-divider-border;
         @if(mixin-exists(hook-inverse-subnav-divider)) {@include hook-inverse-subnav-divider();}
     }
@@ -1350,26 +1350,26 @@
     // Pill
     //
 
-    .ui-subnav-pill > * > :first-child {
+    .uk-subnav-pill > * > :first-child {
         background-color: $inverse-subnav-pill-item-background;
         color: $inverse-subnav-pill-item-color;
         @if(mixin-exists(hook-inverse-subnav-pill-item)) {@include hook-inverse-subnav-pill-item();}
     }
 
-    .ui-subnav-pill > * > a:hover,
-    .ui-subnav-pill > * > a:focus {
+    .uk-subnav-pill > * > a:hover,
+    .uk-subnav-pill > * > a:focus {
         background-color: $inverse-subnav-pill-item-hover-background;
         color: $inverse-subnav-pill-item-hover-color;
         @if(mixin-exists(hook-inverse-subnav-pill-item-hover)) {@include hook-inverse-subnav-pill-item-hover();}
     }
 
-    .ui-subnav-pill > * > a:active {
+    .uk-subnav-pill > * > a:active {
         background-color: $inverse-subnav-pill-item-onclick-background;
         color: $inverse-subnav-pill-item-onclick-color;
         @if(mixin-exists(hook-inverse-subnav-pill-item-onclick)) {@include hook-inverse-subnav-pill-item-onclick();}
     }
 
-    .ui-subnav-pill > .ui-active > a {
+    .uk-subnav-pill > .uk-active > a {
         background-color: $inverse-subnav-pill-item-active-background;
         color: $inverse-subnav-pill-item-active-color;
         @if(mixin-exists(hook-inverse-subnav-pill-item-active)) {@include hook-inverse-subnav-pill-item-active();}
@@ -1379,7 +1379,7 @@
     // Disabled
     //
 
-    .ui-subnav > .ui-disabled > a {
+    .uk-subnav > .uk-disabled > a {
         color: $inverse-subnav-item-disabled-color;
         @if(mixin-exists(hook-inverse-subnav-item-disabled)) {@include hook-inverse-subnav-item-disabled();}
     }
@@ -1387,23 +1387,23 @@
 }
 @mixin hook-inverse-component-pagination(){
 
-    .ui-pagination > * > * {
+    .uk-pagination > * > * {
         color: $inverse-pagination-item-color;
         @if(mixin-exists(hook-inverse-pagination-item)) {@include hook-inverse-pagination-item();}
     }
 
-    .ui-pagination > * > :hover,
-    .ui-pagination > * > :focus {
+    .uk-pagination > * > :hover,
+    .uk-pagination > * > :focus {
         color: $inverse-pagination-item-hover-color;
         @if(mixin-exists(hook-inverse-pagination-item-hover)) {@include hook-inverse-pagination-item-hover();}
     }
 
-    .ui-pagination > .ui-active > * {
+    .uk-pagination > .uk-active > * {
         color: $inverse-pagination-item-active-color;
         @if(mixin-exists(hook-inverse-pagination-item-active)) {@include hook-inverse-pagination-item-active();}
     }
 
-    .ui-pagination > .ui-disabled > * {
+    .uk-pagination > .uk-disabled > * {
         color: $inverse-pagination-item-disabled-color;
         @if(mixin-exists(hook-inverse-pagination-item-disabled)) {@include hook-inverse-pagination-item-disabled();}
     }
@@ -1411,27 +1411,27 @@
 }
 @mixin hook-inverse-component-tab(){
 
-    .ui-tab {
+    .uk-tab {
         @if(mixin-exists(hook-inverse-tab)) {@include hook-inverse-tab();}
     }
 
-    .ui-tab > * > a {
+    .uk-tab > * > a {
         color: $inverse-tab-item-color;
         @if(mixin-exists(hook-inverse-tab-item)) {@include hook-inverse-tab-item();}
     }
 
-    .ui-tab > * > a:hover,
-    .ui-tab > * > a:focus{
+    .uk-tab > * > a:hover,
+    .uk-tab > * > a:focus{
         color: $inverse-tab-item-hover-color;
         @if(mixin-exists(hook-inverse-tab-item-hover)) {@include hook-inverse-tab-item-hover();}
     }
 
-    .ui-tab > .ui-active > a {
+    .uk-tab > .uk-active > a {
         color: $inverse-tab-item-active-color;
         @if(mixin-exists(hook-inverse-tab-item-active)) {@include hook-inverse-tab-item-active();}
     }
 
-    .ui-tab > .ui-disabled > a {
+    .uk-tab > .uk-disabled > a {
         color: $inverse-tab-item-disabled-color;
         @if(mixin-exists(hook-inverse-tab-item-disabled)) {@include hook-inverse-tab-item-disabled();}
     }
@@ -1439,18 +1439,18 @@
 }
 @mixin hook-inverse-component-slidenav(){
 
-    .ui-slidenav {
+    .uk-slidenav {
         color: $inverse-slidenav-color;
         @if(mixin-exists(hook-inverse-slidenav)) {@include hook-inverse-slidenav();}
     }
 
-    .ui-slidenav:hover,
-    .ui-slidenav:focus {
+    .uk-slidenav:hover,
+    .uk-slidenav:focus {
         color: $inverse-slidenav-hover-color;
         @if(mixin-exists(hook-inverse-slidenav-hover)) {@include hook-inverse-slidenav-hover();}
     }
 
-    .ui-slidenav:active {
+    .uk-slidenav:active {
         color: $inverse-slidenav-active-color;
         @if(mixin-exists(hook-inverse-slidenav-active)) {@include hook-inverse-slidenav-active();}
     }
@@ -1458,40 +1458,41 @@
 }
 @mixin hook-inverse-component-text(){
 
-    .ui-text-lead {
+    .uk-text-lead {
         color: $inverse-text-lead-color;
         @if(mixin-exists(hook-inverse-text-lead)) {@include hook-inverse-text-lead();}
     }
 
-    .ui-text-meta {
+    .uk-text-meta {
         color: $inverse-text-meta-color;
         @if(mixin-exists(hook-inverse-text-meta)) {@include hook-inverse-text-meta();}
     }
 
-    .ui-text-muted { color: $inverse-text-muted-color !important; }
-    .ui-text-primary { color: $inverse-text-primary-color !important; }
+    .uk-text-muted { color: $inverse-text-muted-color !important; }
+    .uk-text-emphasis { color: $inverse-text-emphasis-color !important; }
+    .uk-text-primary { color: $inverse-text-primary-color !important; }
 
 }
 @mixin hook-inverse-component-utility(){
 
-    .ui-dropcap::first-letter,
-    .ui-dropcap p:first-of-type::first-letter {
+    .uk-dropcap::first-letter,
+    .uk-dropcap p:first-of-type::first-letter {
         @if(mixin-exists(hook-inverse-dropcap)) {@include hook-inverse-dropcap();}
     }
 
-    .ui-logo {
+    .uk-logo {
         color: $inverse-logo-color;
         @if(mixin-exists(hook-inverse-logo)) {@include hook-inverse-logo();}
     }
 
-    .ui-logo:hover,
-    .ui-logo:focus {
+    .uk-logo:hover,
+    .uk-logo:focus {
         color: $inverse-logo-hover-color;
         @if(mixin-exists(hook-inverse-logo-hover)) {@include hook-inverse-logo-hover();}
     }
 
-    .ui-logo > :not(.ui-logo-inverse):not(:only-of-type) { display: none; }
-    .ui-logo-inverse { display: inline; }
+    .uk-logo > :not(.uk-logo-inverse):not(:only-of-type) { display: none; }
+    .uk-logo-inverse { display: inline; }
 
 }
 @mixin hook-inverse(){
@@ -1538,7 +1539,7 @@
 @mixin hook-inverse-leader(){}
 @mixin hook-inverse-component-leader(){
 
-    .ui-leader-fill {
+    .uk-leader-fill {
         @if(mixin-exists(hook-inverse-leader)) {@include hook-inverse-leader();}
     }
 
@@ -1551,18 +1552,6 @@
 @mixin hook-lightbox-button(){}
 @mixin hook-lightbox-button-hover(){}
 @mixin hook-lightbox-misc(){}
-@mixin hook-link-muted(){}
-@mixin hook-link-muted-hover(){}
-@mixin hook-link-text(){}
-@mixin hook-link-text-hover(){}
-@mixin hook-link-heading(){}
-@mixin hook-link-heading-hover(){}
-@mixin hook-link-reset(){}
-@mixin hook-link-misc(){}
-@mixin hook-inverse-link-muted(){}
-@mixin hook-inverse-link-muted-hover(){}
-@mixin hook-inverse-link-text-hover(){}
-@mixin hook-inverse-link-heading-hover(){}
 @mixin hook-list-divider(){}
 @mixin hook-list-striped(){
 
@@ -1585,6 +1574,18 @@
 }
 @mixin hook-inverse-list-bullet(){}
 @mixin hook-margin-misc(){}
+@mixin hook-link-muted(){}
+@mixin hook-link-muted-hover(){}
+@mixin hook-link-text(){}
+@mixin hook-link-text-hover(){}
+@mixin hook-link-heading(){}
+@mixin hook-link-heading-hover(){}
+@mixin hook-link-reset(){}
+@mixin hook-link-misc(){}
+@mixin hook-inverse-link-muted(){}
+@mixin hook-inverse-link-muted-hover(){}
+@mixin hook-inverse-link-text-hover(){}
+@mixin hook-inverse-link-heading-hover(){}
 @mixin hook-marker(){
     border-radius: 500px;
 }
@@ -1594,14 +1595,14 @@
 @mixin hook-inverse-marker-hover(){}
 @mixin hook-inverse-component-marker(){
 
-    .ui-marker {
+    .uk-marker {
         background: $inverse-marker-background;
         color: $inverse-marker-color;
         @if(mixin-exists(hook-inverse-marker)) {@include hook-inverse-marker();}
     }
 
-    .ui-marker:hover,
-    .ui-marker:focus {
+    .uk-marker:hover,
+    .uk-marker:focus {
         color: $inverse-marker-hover-color;
         @if(mixin-exists(hook-inverse-marker-hover)) {@include hook-inverse-marker-hover();}
     }
@@ -1690,19 +1691,19 @@
      * Navbar
      */
 
-    .ui-navbar-container > .ui-container .ui-navbar-left {
+    .uk-navbar-container > .uk-container .uk-navbar-left {
         margin-left: (-$navbar-nav-item-padding-horizontal);
         margin-right: (-$navbar-nav-item-padding-horizontal);
     }
-    .ui-navbar-container > .ui-container .ui-navbar-right { margin-right: (-$navbar-nav-item-padding-horizontal); }
+    .uk-navbar-container > .uk-container .uk-navbar-right { margin-right: (-$navbar-nav-item-padding-horizontal); }
 
     /*
      * Grid Divider
      */
 
-    .ui-navbar-dropdown-grid > * { position: relative; }
+    .uk-navbar-dropdown-grid > * { position: relative; }
 
-    .ui-navbar-dropdown-grid > :not(.ui-first-column)::before {
+    .uk-navbar-dropdown-grid > :not(.uk-first-column)::before {
         content: "";
         position: absolute;
         top: 0;
@@ -1712,7 +1713,7 @@
     }
 
     /* Vertical */
-    .ui-navbar-dropdown-grid.ui-grid-stack > .ui-grid-margin::before {
+    .uk-navbar-dropdown-grid.uk-grid-stack > .uk-grid-margin::before {
         content: "";
         position: absolute;
         top: -($navbar-dropdown-grid-gutter-vertical / 2);
@@ -1907,7 +1908,7 @@
 }
 @mixin hook-tab-misc(){
 
-    .ui-tab .ui-dropdown { margin-left: ($tab-margin-horizontal + $tab-item-padding-horizontal) }
+    .uk-tab .uk-dropdown { margin-left: ($tab-margin-horizontal + $tab-item-padding-horizontal) }
 
 }
 @mixin hook-inverse-tab(){
@@ -1935,7 +1936,7 @@
 @mixin hook-table-large(){}
 @mixin hook-table-misc(){
 
-    .ui-table tbody tr { transition: background-color 0.1s linear; }
+    .uk-table tbody tr { transition: background-color 0.1s linear; }
 
 }
 @mixin hook-inverse-table-header-cell(){}
@@ -1949,37 +1950,37 @@
 @mixin hook-inverse-table-hover(){}
 @mixin hook-inverse-component-table(){
 
-    .ui-table th {
+    .uk-table th {
         color: $inverse-table-header-cell-color;
         @if(mixin-exists(hook-inverse-table-header-cell)) {@include hook-inverse-table-header-cell();}
     }
 
-    .ui-table caption {
+    .uk-table caption {
         color: $inverse-table-caption-color;
         @if(mixin-exists(hook-inverse-table-caption)) {@include hook-inverse-table-caption();}
     }
 
-    .ui-table > tr.ui-active,
-    .ui-table tbody tr.ui-active {
+    .uk-table > tr.uk-active,
+    .uk-table tbody tr.uk-active {
         background: $inverse-table-row-active-background;
         @if(mixin-exists(hook-inverse-table-row-active)) {@include hook-inverse-table-row-active();}
     }
 
-    .ui-table-divider > tr:not(:first-child),
-    .ui-table-divider > :not(:first-child) > tr,
-    .ui-table-divider > :first-child > tr:not(:first-child) {
+    .uk-table-divider > tr:not(:first-child),
+    .uk-table-divider > :not(:first-child) > tr,
+    .uk-table-divider > :first-child > tr:not(:first-child) {
         border-top-color: $inverse-table-divider-border;
         @if(mixin-exists(hook-inverse-table-divider)) {@include hook-inverse-table-divider();}
     }
 
-    .ui-table-striped > tr:nth-of-type(odd),
-    .ui-table-striped tbody tr:nth-of-type(odd) {
+    .uk-table-striped > tr:nth-of-type(odd),
+    .uk-table-striped tbody tr:nth-of-type(odd) {
         background: $inverse-table-striped-row-background;
         @if(mixin-exists(hook-inverse-table-striped)) {@include hook-inverse-table-striped();}
     }
 
-    .ui-table-hover > tr:hover,
-    .ui-table-hover tbody tr:hover {
+    .uk-table-hover > tr:hover,
+    .uk-table-hover tbody tr:hover {
         background: $inverse-table-hover-row-background;
         @if(mixin-exists(hook-inverse-table-hover)) {@include hook-inverse-table-hover();}
     }
@@ -2031,16 +2032,16 @@
 @mixin hook-inverse-thumbnav-item-active(){}
 @mixin hook-inverse-component-thumbnav(){
 
-    .ui-thumbnav > * > * {
+    .uk-thumbnav > * > * {
         @if(mixin-exists(hook-inverse-thumbnav-item)) {@include hook-inverse-thumbnav-item();}
     }
 
-    .ui-thumbnav > * > :hover,
-    .ui-thumbnav > * > :focus {
+    .uk-thumbnav > * > :hover,
+    .uk-thumbnav > * > :focus {
         @if(mixin-exists(hook-inverse-thumbnav-item-hover)) {@include hook-inverse-thumbnav-item-hover();}
     }
 
-    .ui-thumbnav > .ui-active > * {
+    .uk-thumbnav > .uk-active > * {
         @if(mixin-exists(hook-inverse-thumbnav-item-active)) {@include hook-inverse-thumbnav-item-active();}
     }
 

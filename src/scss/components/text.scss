@@ -1,7 +1,7 @@
 // Name:            Text
 // Description:     Utilities for text
 //
-// Component:       `ui-text-*`
+// Component:       `uk-text-*`
 //
 // ========================================================================
 
@@ -26,6 +26,7 @@ $text-large-line-height:                         1.5 !default;
 $text-bold-font-weight:                          bolder !default;
 
 $text-muted-color:                               $global-muted-color !default;
+$text-emphasis-color:                            $global-emphasis-color !default;
 $text-primary-color:                             $global-primary-background !default;
 $text-success-color:                             $global-success-background !default;
 $text-warning-color:                             $global-warning-background !default;
@@ -42,14 +43,14 @@ $text-background-color:                          $global-primary-background !def
 /* Style modifiers
  ========================================================================== */
 
-.ui-text-lead {
+.uk-text-lead {
     font-size: $text-lead-font-size;
     line-height: $text-lead-line-height;
     color: $text-lead-color;
     @if(mixin-exists(hook-text-lead)) {@include hook-text-lead();}
 }
 
-.ui-text-meta {
+.uk-text-meta {
     font-size: $text-meta-font-size;
     line-height: $text-meta-line-height;
     color: $text-meta-color;
@@ -60,13 +61,13 @@ $text-background-color:                          $global-primary-background !def
 /* Size modifiers
  ========================================================================== */
 
-.ui-text-small {
+.uk-text-small {
     font-size: $text-small-font-size;
     line-height: $text-small-line-height;
     @if(mixin-exists(hook-text-small)) {@include hook-text-small();}
 }
 
-.ui-text-large {
+.uk-text-large {
     font-size: $text-large-font-size;
     line-height: $text-large-line-height;
     @if(mixin-exists(hook-text-large)) {@include hook-text-large();}
@@ -76,25 +77,26 @@ $text-background-color:                          $global-primary-background !def
 /* Weight modifier
  ========================================================================== */
 
-.ui-text-bold { font-weight: $text-bold-font-weight; }
+.uk-text-bold { font-weight: $text-bold-font-weight; }
 
 
 /* Transform modifier
  ========================================================================== */
 
-.ui-text-uppercase { text-transform: uppercase !important; }
-.ui-text-capitalize { text-transform: capitalize !important; }
-.ui-text-lowercase { text-transform: lowercase !important; }
+.uk-text-uppercase { text-transform: uppercase !important; }
+.uk-text-capitalize { text-transform: capitalize !important; }
+.uk-text-lowercase { text-transform: lowercase !important; }
 
 
 /* Color modifiers
  ========================================================================== */
 
-.ui-text-muted { color: $text-muted-color !important; }
-.ui-text-primary { color: $text-primary-color !important; }
-.ui-text-success { color: $text-success-color !important; }
-.ui-text-warning { color: $text-warning-color !important; }
-.ui-text-danger { color: $text-danger-color !important; }
+.uk-text-muted { color: $text-muted-color !important; }
+.uk-text-emphasis { color: $text-emphasis-color !important; }
+.uk-text-primary { color: $text-primary-color !important; }
+.uk-text-success { color: $text-success-color !important; }
+.uk-text-warning { color: $text-warning-color !important; }
+.uk-text-danger { color: $text-danger-color !important; }
 
 
 /* Background modifier
@@ -107,7 +109,7 @@ $text-background-color:                          $global-primary-background !def
  * 3. Fallback color for IE11
  */
 
-.ui-text-background {
+.uk-text-background {
     /* 1 */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -119,7 +121,7 @@ $text-background-color:                          $global-primary-background !def
 
 @supports (-webkit-background-clip: text) {
 
-    .ui-text-background {
+    .uk-text-background {
         background-color: $text-background-color;
         @if(mixin-exists(hook-text-background)) {@include hook-text-background();}
     }
@@ -130,44 +132,44 @@ $text-background-color:                          $global-primary-background !def
 /* Alignment modifiers
  ========================================================================== */
 
-.ui-text-left { text-align: left !important; }
-.ui-text-right { text-align: right !important; }
-.ui-text-center { text-align: center !important; }
-.ui-text-justify { text-align: justify !important; }
+.uk-text-left { text-align: left !important; }
+.uk-text-right { text-align: right !important; }
+.uk-text-center { text-align: center !important; }
+.uk-text-justify { text-align: justify !important; }
 
 /* Phone landscape and bigger */
 @media (min-width: $breakpoint-small) {
 
-    .ui-text-left\@s { text-align: left !important; }
-    .ui-text-right\@s { text-align: right !important; }
-    .ui-text-center\@s { text-align: center !important; }
+    .uk-text-left\@s { text-align: left !important; }
+    .uk-text-right\@s { text-align: right !important; }
+    .uk-text-center\@s { text-align: center !important; }
 
 }
 
 /* Tablet landscape and bigger */
 @media (min-width: $breakpoint-medium) {
 
-    .ui-text-left\@m { text-align: left !important; }
-    .ui-text-right\@m { text-align: right !important; }
-    .ui-text-center\@m { text-align: center !important; }
+    .uk-text-left\@m { text-align: left !important; }
+    .uk-text-right\@m { text-align: right !important; }
+    .uk-text-center\@m { text-align: center !important; }
 
 }
 
 /* Desktop and bigger */
 @media (min-width: $breakpoint-large) {
 
-    .ui-text-left\@l { text-align: left !important; }
-    .ui-text-right\@l { text-align: right !important; }
-    .ui-text-center\@l { text-align: center !important; }
+    .uk-text-left\@l { text-align: left !important; }
+    .uk-text-right\@l { text-align: right !important; }
+    .uk-text-center\@l { text-align: center !important; }
 
 }
 
 /* Large screen and bigger */
 @media (min-width: $breakpoint-xlarge) {
 
-    .ui-text-left\@xl { text-align: left !important; }
-    .ui-text-right\@xl { text-align: right !important; }
-    .ui-text-center\@xl { text-align: center !important; }
+    .uk-text-left\@xl { text-align: left !important; }
+    .uk-text-right\@xl { text-align: right !important; }
+    .uk-text-center\@xl { text-align: center !important; }
 
 }
 
@@ -175,10 +177,10 @@ $text-background-color:                          $global-primary-background !def
  * Vertical
  */
 
-.ui-text-top { vertical-align: top !important; }
-.ui-text-middle { vertical-align: middle !important; }
-.ui-text-bottom { vertical-align: bottom !important; }
-.ui-text-baseline { vertical-align: baseline !important; }
+.uk-text-top { vertical-align: top !important; }
+.uk-text-middle { vertical-align: middle !important; }
+.uk-text-bottom { vertical-align: bottom !important; }
+.uk-text-baseline { vertical-align: baseline !important; }
 
 
 /* Wrap modifiers
@@ -188,7 +190,7 @@ $text-background-color:                          $global-primary-background !def
  * Prevent text from wrapping onto multiple lines
  */
 
-.ui-text-nowrap { white-space: nowrap; }
+.uk-text-nowrap { white-space: nowrap; }
 
 /*
  * 1. Make sure a max-width is set after which truncation can occur
@@ -196,7 +198,7 @@ $text-background-color:                          $global-primary-background !def
  * 3. Fix for table cells
  */
 
-.ui-text-truncate {
+.uk-text-truncate {
     /* 1 */
     max-width: 100%;
     /* 2 */
@@ -206,8 +208,8 @@ $text-background-color:                          $global-primary-background !def
 }
 
 /* 2 */
-th.ui-text-truncate,
-td.ui-text-truncate { max-width: 0; }
+th.uk-text-truncate,
+td.uk-text-truncate { max-width: 0; }
 
 
 /*
@@ -218,7 +220,7 @@ td.ui-text-truncate { max-width: 0; }
  * Note: Not using `hyphens: auto;` because it hyphenates text even if not needed
  */
 
-.ui-text-break {
+.uk-text-break {
     /* 1 */
     overflow-wrap: break-word;
     /* 2 */
@@ -226,8 +228,8 @@ td.ui-text-truncate { max-width: 0; }
 }
 
 /* 3 */
-th.ui-text-break,
-td.ui-text-break { word-break: break-all; }
+th.uk-text-break,
+td.uk-text-break { word-break: break-all; }
 
 
 
@@ -250,6 +252,7 @@ td.ui-text-break { word-break: break-all; }
 $inverse-text-lead-color:                       $inverse-global-color !default;
 $inverse-text-meta-color:                       $inverse-global-muted-color !default;
 $inverse-text-muted-color:                      $inverse-global-muted-color !default;
+$inverse-text-emphasis-color:                   $inverse-global-emphasis-color !default;
 $inverse-text-primary-color:                    $inverse-global-color !default;
 
 
