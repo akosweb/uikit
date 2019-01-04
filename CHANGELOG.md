@@ -1,5 +1,77 @@
 # Changelog
 
+## 3.0.0 rc 26 (January 3, 2019)
+
+### Added
+
+- Add expand classes to Container component
+
+### Changed
+
+- @notification-message-margin-bottom to top in Notification component
+- Improve swipe gesture detection
+- `isInView` checks relative to viewport only
+
+### Fixed
+
+- Fix `flex bug` mixin (IE 11)
+- Fix properly resolving css custom properties in scss
+- Fix order of variable assignments in scss
+- Fix background images are shown too large on retina displays in Img component
+- Fix lazy loading images in Img component in Safari
+- Limit positioned element to container width and margin in Position component
+
+## 3.0.0 rc 25 (November 30, 2018)
+
+### Fixed
+
+- Fix `hasClass` in IE11 again
+- Fix workaround to mitigate the duplicating icons issue
+
+## 3.0.0 rc 24 (November 23, 2018)
+
+### Changed
+
+- Drop positioning uses window as secondary boundary
+
+### Fixed
+
+- Fix modal not opening on first click in Angular apps
+- Fix filter controls active state in Filter component
+- Fix Masonry Grid in Rtl mode
+- Make sure autoplay does not resume after user interaction in slider-autoplay mixin
+- Fix `hasClass` in IE11
+
+## 3.0.0 rc 23 (November 16, 2018)
+
+### Changed
+
+- Destroy Lightbox Panel upon closing
+
+### Fixed
+
+- Fix sticky not recalculating after update
+- Fix clicking on items not triggering `click` event in Sortable component
+- Fix Offcanvas changing viewport upon opening
+
+## 3.0.0 rc 22 (November 9, 2018)
+
+### Fixed
+
+- Fix regressions in Modal component
+
+## 3.0.0 rc 21 (November 7, 2018)
+
+### Added
+
+- Add threshold before Sticky with `Show On Up` changes state
+- Add `draggable` option to Slider and Slideshow component
+
+### Fixed
+
+- Fix toggling Offcanvas component while transition in progress
+- Fix Offcanvas height on mobile devices
+
 ## 3.0.0 rc 20 (October 24, 2018)
 
 ### Added
@@ -13,7 +85,7 @@
 - Offcanvas no longer requires a wrapping content div
 - Change video-camera icon style to outline
 
-## Fixed
+### Fixed
 
 - Fix sorting in Sortable component on touch devices with page scrolled down
 - Fix height of Masonry Grid

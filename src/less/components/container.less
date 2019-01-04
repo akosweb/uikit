@@ -6,6 +6,10 @@
 // Modifier:        `ui-container-small`
 //                  `ui-container-large`
 //                  `ui-container-expand`
+//                  `ui-container-expand-left`
+//                  `ui-container-expand-right`
+//                  `ui-container-item-padding-remove-left`
+//                  `ui-container-item-padding-remove-right`
 //
 // ========================================================================
 
@@ -33,7 +37,8 @@
  */
 
 .ui-container {
-    box-sizing: content-box; /* 1 */
+    /* 1 */
+    box-sizing: content-box;
     max-width: @container-max-width;
     margin-left: auto;
     margin-right: auto;
@@ -99,6 +104,82 @@
 .ui-container-large { max-width: @container-large-max-width; }
 
 .ui-container-expand { max-width: none; }
+
+
+/* Expand modifier
+ ========================================================================== */
+
+/*
+ * Expand one side only
+ */
+
+.ui-container-expand-left { margin-left: 0; }
+.ui-container-expand-right { margin-right: 0; }
+
+/* Phone landscape and bigger */
+@media (min-width: @breakpoint-small) {
+
+    .ui-container-expand-left.ui-container-xsmall,
+    .ui-container-expand-right.ui-container-xsmall { max-width: ~'calc(50% + (@{container-xsmall-max-width} / 2) - @{container-padding-horizontal-s})'; }
+
+    .ui-container-expand-left.ui-container-small,
+    .ui-container-expand-right.ui-container-small { max-width: ~'calc(50% + (@{container-small-max-width} / 2) - @{container-padding-horizontal-s})'; }
+
+}
+
+/* Tablet landscape and bigger */
+@media (min-width: @breakpoint-medium) {
+
+    .ui-container-expand-left,
+    .ui-container-expand-right { max-width: ~'calc(50% + (@{container-max-width} / 2) - @{container-padding-horizontal-m})'; }
+
+    .ui-container-expand-left.ui-container-xsmall,
+    .ui-container-expand-right.ui-container-xsmall { max-width: ~'calc(50% + (@{container-xsmall-max-width} / 2) - @{container-padding-horizontal-m})'; }
+
+    .ui-container-expand-left.ui-container-small,
+    .ui-container-expand-right.ui-container-small { max-width: ~'calc(50% + (@{container-small-max-width} / 2) - @{container-padding-horizontal-m})'; }
+
+    .ui-container-expand-left.ui-container-large,
+    .ui-container-expand-right.ui-container-large { max-width: ~'calc(50% + (@{container-large-max-width} / 2) - @{container-padding-horizontal-m})'; }
+
+}
+
+
+/* Item
+ ========================================================================== */
+
+/*
+ * Utility classes to reset container padding on the left or right side
+ * Note: It has to be negative margin on the item, because it's specific to the item.
+ */
+
+.ui-container-item-padding-remove-left,
+.ui-container-item-padding-remove-right { width: ~'calc(100% + @{container-padding-horizontal})' }
+
+.ui-container-item-padding-remove-left { margin-left: -@container-padding-horizontal; }
+.ui-container-item-padding-remove-right { margin-right: -@container-padding-horizontal; }
+
+/* Phone landscape and bigger */
+@media (min-width: @breakpoint-small) {
+
+    .ui-container-item-padding-remove-left,
+    .ui-container-item-padding-remove-right { width: ~'calc(100% + @{container-padding-horizontal-s})' }
+
+    .ui-container-item-padding-remove-left { margin-left: -@container-padding-horizontal-s; }
+    .ui-container-item-padding-remove-right { margin-right: -@container-padding-horizontal-s; }
+
+}
+
+/* Tablet landscape and bigger */
+@media (min-width: @breakpoint-medium) {
+
+    .ui-container-item-padding-remove-left,
+    .ui-container-item-padding-remove-right { width: ~'calc(100% + @{container-padding-horizontal-m})' }
+
+    .ui-container-item-padding-remove-left { margin-left: -@container-padding-horizontal-m; }
+    .ui-container-item-padding-remove-right { margin-right: -@container-padding-horizontal-m; }
+
+}
 
 
 // Hooks

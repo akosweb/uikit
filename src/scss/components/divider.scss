@@ -91,10 +91,11 @@ $divider-vertical-border:                        $global-border !default;
  ========================================================================== */
 
 /*
- * Reset child height, caused by `inline-block`
+ * Fix height of `hr` element not being expanded by child border width.
+ * `height` also needed to reset the child `line-height` caused by `inline-block`
  */
 
-.ui-divider-small { line-height: 0; }
+.ui-divider-small { height: $divider-small-border-width; }
 
 .ui-divider-small::after {
     content: "";

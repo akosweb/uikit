@@ -3,7 +3,7 @@ import Container from '../mixin/container';
 import Modal from '../mixin/modal';
 import Slideshow from '../mixin/slideshow';
 import Togglable from '../mixin/togglable';
-import {$, addClass, ajax, append, assign, attr, css, getImage, html, index, on, pointerDown, pointerMove, removeClass, Transition, trigger} from 'uikit-util';
+import {$, addClass, ajax, append, assign, attr, css, getImage, html, index, once, pointerDown, pointerMove, removeClass, Transition, trigger} from 'uikit-util';
 
 export default {
 
@@ -111,6 +111,18 @@ export default {
 
         {
 
+            name: 'hidden',
+
+            self: true,
+
+            handler() {
+                this.$destroy(true);
+            }
+
+        },
+
+        {
+
             name: 'keyup',
 
             el: document,
@@ -142,7 +154,7 @@ export default {
                     return;
                 }
 
-                this.preventCatch = true;
+                this.draggable = false;
 
                 e.preventDefault();
 
@@ -182,7 +194,7 @@ export default {
             name: 'itemshown',
 
             handler() {
-                this.preventCatch = false;
+                this.draggable = this.$props.draggable;
             }
 
         },
@@ -217,10 +229,13 @@ export default {
                     const video = $(`<video controls playsinline${item.poster ? ` poster="${item.poster}"` : ''} ui-video="${this.videoAutoplay}"></video>`);
                     attr(video, 'src', source);
 
-                    on(video, 'error', () => this.setError(item));
-                    on(video, 'loadedmetadata', () => {
-                        attr(video, {width: video.videoWidth, height: video.videoHeight});
-                        this.setItem(item, video);
+                    once(video, 'error loadedmetadata', type => {
+                        if (type === 'error') {
+                            this.setError(item);
+                        } else {
+                            attr(video, {width: video.videoWidth, height: video.videoHeight});
+                            this.setItem(item, video);
+                        }
                     });
 
                     // Iframe
