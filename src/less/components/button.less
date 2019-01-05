@@ -64,6 +64,7 @@
 
 @button-disabled-background:                    @global-muted-background;
 @button-disabled-color:                         @global-muted-color;
+@button-disabled-opacity:                       .65;
 
 @button-text-line-height:                       @global-line-height;
 @button-text-color:                             @global-muted-color;
@@ -98,7 +99,7 @@
     /* 1 */
     margin: 0;
     /* 2 */
-    border: none;
+    border: @global-border-width solid transparent;
     /* 3 */
     overflow: visible;
     /* 4 */
@@ -141,7 +142,8 @@
 
 /* Focus */
 .ui-button:focus {
-    outline: none;
+    outline: @global-outline;
+    outline-offset: @global-outline-offset;
     .hook-button-focus;
 }
 
@@ -207,6 +209,28 @@
     .hook-button-primary-active;
 }
 
+.ui-button-primary.ui-button-outline {
+    background-color: transparent;
+    color: @button-primary-background;
+    border: @global-border-width solid @button-primary-background;
+}
+
+/* Hover + Focus */
+.ui-button-primary.ui-button-outline:hover,
+.ui-button-primary.ui-button-outline:focus {
+    background-color: @button-primary-hover-background;
+    color: @button-primary-hover-color;
+    border-color: @button-primary-hover-background;
+}
+
+/* OnClick + Active */
+.ui-button-primary.ui-button-outline:active,
+.ui-button-primary.ui-button-outline.ui-active {
+    background-color: @button-primary-active-background;
+    color: @button-primary-active-color;
+    border-color: @button-primary-active-background;
+}
+
 /*
  * Secondary
  */
@@ -231,6 +255,28 @@
     background-color: @button-secondary-active-background;
     color: @button-secondary-active-color;
     .hook-button-secondary-active;
+}
+
+.ui-button-secondary.ui-button-outline {
+    background-color: transparent;
+    color: @button-secondary-background;
+    border: @global-border-width solid @button-secondary-background;
+}
+
+/* Hover + Focus */
+.ui-button-secondary.ui-button-outline:hover,
+.ui-button-secondary.ui-button-outline:focus {
+    background-color: @button-secondary-hover-background;
+    color: @button-secondary-hover-color;
+    border-color: @button-secondary-hover-background;
+}
+
+/* OnClick + Active */
+.ui-button-secondary.ui-button-outline:active,
+.ui-button-secondary.ui-button-outline.ui-active {
+    background-color: @button-secondary-active-background;
+    color: @button-secondary-active-color;
+    border-color: @button-secondary-active-background;
 }
 
 /*
@@ -259,23 +305,87 @@
     .hook-button-danger-active;
 }
 
+.ui-button-danger.ui-button-outline {
+    background-color: transparent;
+    color: @button-danger-background;
+    border: @global-border-width solid @button-danger-background;
+}
+
+/* Hover + Focus */
+.ui-button-danger.ui-button-outline:hover,
+.ui-button-danger.ui-button-outline:focus {
+    background-color: @button-danger-hover-background;
+    color: @button-danger-hover-color;
+    border-color: @button-danger-hover-background;
+}
+
+/* OnClick + Active */
+.ui-button-danger.ui-button-outline:active,
+.ui-button-danger.ui-button-outline.ui-active {
+    background-color: @button-danger-active-background;
+    color: @button-danger-active-color;
+    border-color: @button-danger-active-background;
+}
+
 /*
  * Disabled
  * The same for all style modifiers
  */
 
+/*.ui-button-default:disabled {
+    background-color: @button-disabled-background;
+    color: @button-disabled-color;
+    .hook-button-disabled;
+}*/
+
 .ui-button-default:disabled,
 .ui-button-primary:disabled,
 .ui-button-secondary:disabled,
 .ui-button-danger:disabled {
-    background-color: @button-disabled-background;
-    color: @button-disabled-color;
+    opacity: @button-disabled-opacity;
     .hook-button-disabled;
 }
 
+.ui-button-default:disabled {
+    background-color: @button-default-background;
+    color: @button-default-color;
+    .hook-button-default-disabled;
+}
 
-/* Size modifiers
- ========================================================================== */
+.ui-button-primary:disabled {
+    background-color: @button-primary-background;
+    color: @button-primary-color;
+    .hook-button-primary-disabled;
+}
+
+.ui-button-primary.ui-button-outline:disabled {
+    background-color: transparent;
+    color: @button-primary-background;
+}
+
+.ui-button-secondary:disabled {
+    background-color: @button-secondary-background;
+    color: @button-secondary-color;
+}
+
+.ui-button-secondary.ui-button-outline:disabled {
+    background-color: transparent;
+    color: @button-secondary-background;
+}
+
+.ui-button-danger:disabled {
+    background-color: @button-danger-background;
+    color: @button-danger-color;
+}
+
+.ui-button-danger.ui-button-outline:disabled {
+    background-color: transparent;
+    color: @button-danger-background;
+}
+
+
+    /* Size modifiers
+     ========================================================================== */
 
 .ui-button-small {
     padding: 0 @button-small-padding-horizontal;
@@ -395,6 +505,8 @@
 .hook-button-danger-hover() {}
 .hook-button-danger-active() {}
 .hook-button-disabled() {}
+.hook-button-default-disabled() {}
+.hook-button-primary-disabled() {}
 .hook-button-small() {}
 .hook-button-large() {}
 .hook-button-text() {}

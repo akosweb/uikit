@@ -14,11 +14,22 @@
 $alert-close-opacity:                            0.4 !default;
 $alert-close-hover-opacity:                      0.8 !default;
 
+$alert-primary-color:                            darken($global-primary-background, 15%) !default;
+$alert-success-color:                            darken($global-success-background, 15%) !default;
+$alert-warning-color:                            darken($global-warning-background, 15%) !default;
+$alert-danger-color:                             darken($global-danger-background, 15%) !default;
+
+$alert-border:                                   $global-border-width solid lighten(mix(white, $global-color, 45%), 20%) !default;
+$alert-primary-border:                           $global-border-width solid lighten(mix(white, $global-primary-background, 45%), 10%) !default;
+$alert-success-border:                           $global-border-width solid lighten(mix(white, $global-success-background, 45%), 10%) !default;
+$alert-warning-border:                           $global-border-width solid lighten(mix(white, $global-warning-background, 45%), 5%) !default;
+$alert-danger-border:                            $global-border-width solid lighten(mix(white, $global-danger-background, 45%), 10%) !default;
+
 
 // Component
 // ========================================================================
 
-// @mixin hook-alert(){}
+
 
 
 // Close
@@ -32,13 +43,13 @@ $alert-close-hover-opacity:                      0.8 !default;
 // Style modifiers
 // ========================================================================
 
-// @mixin hook-alert-primary(){}
 
-// @mixin hook-alert-success(){}
 
-// @mixin hook-alert-warning(){}
 
-// @mixin hook-alert-danger(){}
+
+
+
+
 
 
 // Miscellaneous

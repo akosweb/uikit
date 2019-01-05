@@ -24,7 +24,7 @@ $tooltip-z-index:                                $global-z-index + 30 !default;
 $tooltip-max-width:                              200px !default;
 $tooltip-padding-vertical:                       3px !default;
 $tooltip-padding-horizontal:                     6px !default;
-$tooltip-background:                             #666 !default;
+$tooltip-background:                             $global-tooltip-color !default;
 $tooltip-border-radius:                          2px !default;
 $tooltip-color:                                  $global-inverse-color !default;
 $tooltip-font-size:                              12px !default;

@@ -64,7 +64,7 @@ $animation-slide-medium-translate:               50px !default;
 .ui-animation-fade {
     animation-name: ui-fade;
     animation-duration: $animation-fade-duration;
-    animation-timing-function: linear;
+    animation-timing-function: ease;
 }
 
 /*

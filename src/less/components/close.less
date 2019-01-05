@@ -30,8 +30,13 @@
 .ui-close:hover,
 .ui-close:focus {
     color: @close-hover-color;
-    outline: none;
     .hook-close-hover;
+}
+
+.ui-close:focus {
+    outline: @global-outline;
+    outline-offset: @global-outline-offset;
+    .hook-close-focus;
 }
 
 
@@ -42,6 +47,7 @@
 
 .hook-close() {}
 .hook-close-hover() {}
+.hook-close-focus() {}
 .hook-close-misc() {}
 
 
