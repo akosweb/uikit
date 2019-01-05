@@ -35,6 +35,7 @@
     }
 
 }
+@mixin hook-align-misc(){}
 @mixin hook-accordion(){}
 @mixin hook-accordion-item(){}
 @mixin hook-accordion-title(){
@@ -68,9 +69,7 @@
     .ui-open > .ui-accordion-title::before { @include svg-fill($internal-accordion-open-image, "#000", $inverse-global-color); }
 
 }
-@mixin hook-animation-misc(){}
 @mixin hook-background-misc(){}
-@mixin hook-align-misc(){}
 @mixin hook-article(){}
 @mixin hook-article-adjacent(){}
 @mixin hook-article-title(){}
@@ -311,6 +310,7 @@
     }
 
 }
+@mixin hook-animation-misc(){}
 @mixin hook-button(){
     text-transform: $button-text-transform;
     transition: 0.1s ease-in-out;
