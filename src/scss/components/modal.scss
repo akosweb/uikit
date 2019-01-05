@@ -159,7 +159,7 @@ $modal-close-outside-hover-color:                $global-inverse-color !default;
     /* 5 */
     opacity: 0;
     transform: translateY(-100px);
-    transition: 0.3s linear;
+    transition: 0.3s ease;
     transition-property: opacity, transform;
     @if(mixin-exists(hook-modal-dialog)) {@include hook-modal-dialog();}
 }

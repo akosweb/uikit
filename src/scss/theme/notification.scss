@@ -7,6 +7,9 @@
 // Variables
 // ========================================================================
 
+$notification-message-background:                      $global-secondary-background !default;
+$notification-message-color:                           $global-inverse-color !default;
+$notification-message-font-size:                       $global-font-size !default;
 
 // Component
 // ========================================================================
@@ -17,7 +20,7 @@
 // Message
 // ========================================================================
 
-// @mixin hook-notification-message(){}
+
 
 
 // Close

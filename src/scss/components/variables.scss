@@ -49,6 +49,7 @@ $global-small-font-size:                         0.875rem !default; // 14px
 $global-color:                                   #666 !default;
 $global-emphasis-color:                          #333 !default;
 $global-muted-color:                             #999 !default;
+$global-tooltip-color:                           #666 !default;
 
 $global-link-color:                              #1e87f0 !default;
 $global-link-hover-color:                        #0f6ecd !default;
@@ -65,7 +66,7 @@ $global-muted-background:                        #f8f8f8 !default;
 $global-primary-background:                      #1e87f0 !default;
 $global-secondary-background:                    #222 !default;
 
-$global-success-background:                      #32d296 !default;
+$global-success-background:                      #38c172 !default;
 $global-warning-background:                      #faa05a !default;
 $global-danger-background:                       #f0506e !default;
 
@@ -115,3 +116,10 @@ $global-control-large-height:                    55px !default;
 //
 
 $global-z-index:                                 1000 !default;
+
+//
+// Outline
+//
+
+$global-outline:                                 1px dotted rgba(34, 34, 34, 0.8) !default;
+$global-outline-offset:                          2px !default;

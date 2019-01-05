@@ -96,7 +96,10 @@ $internal-nav-parent-open-image: "data:image/svg+xml;charset=UTF-8,%3Csvg%20widt
 }
 
 /* 3 */
-.ui-nav li > a:focus { outline: none; }
+.ui-nav li > a:focus {
+    outline: $global-outline;
+    outline-offset: $global-outline-offset;
+}
 
 /*
  * Items

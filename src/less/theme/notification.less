@@ -7,6 +7,9 @@
 // Variables
 // ========================================================================
 
+@notification-message-background:                     @global-secondary-background;
+@notification-message-color:                          @global-inverse-color;
+@notification-message-font-size:                      @global-font-size;
 
 // Component
 // ========================================================================
@@ -17,7 +20,7 @@
 // Message
 // ========================================================================
 
-.hook-notification-message() {}
+.hook-notification-message() { border-radius: @border-rounded-border-radius; }
 
 
 // Close

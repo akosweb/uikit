@@ -96,7 +96,10 @@
 }
 
 /* 3 */
-.ui-nav li > a:focus { outline: none; }
+.ui-nav li > a:focus {
+    outline: @global-outline;
+    outline-offset: @global-outline-offset;
+}
 
 /*
  * Items
