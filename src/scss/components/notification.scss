@@ -118,7 +118,7 @@ $notification-message-danger-color:                    $global-danger-background
     @if(mixin-exists(hook-notification-message)) {@include hook-notification-message();}
 }
 
-* + .uk-notification-message { margin-top: $notification-message-margin-top; }
+* + .ui-notification-message { margin-top: $notification-message-margin-top; }
 
 
 /* Close

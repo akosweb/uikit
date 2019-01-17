@@ -19,7 +19,7 @@ export default function (UIkit) {
         on(document, 'loadedmetadata load', ({target}) => UIkit.update(target, 'load'), true);
 
         on(document, 'animationstart', ({target}) => {
-            if ((css(target, 'animationName') || '').match(/^uk-.*(left|right)/)) {
+            if ((css(target, 'animationName') || '').match(/^ui-.*(left|right)/)) {
 
                 started++;
                 css(document.body, 'overflowX', 'hidden');
